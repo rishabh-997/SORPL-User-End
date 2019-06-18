@@ -18,6 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LogIn.MVP.LogInActivity"
+            android:label="LogIn"/>
+        <activity android:name=".SignUp.MVP.SignUpActivity"
+            android:label="SignUp"/>
+        <activity android:name=".HomePage.MVP.HomeActivity"
+            android:label="Home"/>
     </application>
 
 </manifest>
