@@ -9,8 +9,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.sorpluserend.HomePage.MVP.Cart.CartFragment;
 import com.example.sorpluserend.HomePage.MVP.Enquiry.EnquiryFragment;
 import com.example.sorpluserend.HomePage.MVP.Market.MarketFragment;
 import com.example.sorpluserend.HomePage.MVP.Product.ProductFragment;
@@ -25,6 +27,7 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
     final Fragment fragment1 = new ProductFragment();
     final Fragment fragment2 = new MarketFragment();
     final Fragment fragment3 = new EnquiryFragment();
+    final Fragment fragment4 = new CartFragment();
     final FragmentManager fm = getSupportFragmentManager();
     Fragment active = fragment1;
 
@@ -45,10 +48,10 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
+        fm.beginTransaction().add(R.id.main_container,fragment4,"4").hide(fragment4).commit();
         fm.beginTransaction().add(R.id.main_container, fragment3, "3").hide(fragment3).commit();
         fm.beginTransaction().add(R.id.main_container, fragment2, "2").hide(fragment2).commit();
         fm.beginTransaction().add(R.id.main_container,fragment1, "1").commit();
-
     }
 
     BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -70,6 +73,11 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
                 case R.id.navigation_enquiry:
                     fm.beginTransaction().hide(active).show(fragment3).commit();
                     active = fragment3;
+                    return true;
+
+                case R.id.navigation_cart:
+                    fm.beginTransaction().hide(active).show(fragment4).commit();
+                    active=fragment4;
                     return true;
             }
             return false;

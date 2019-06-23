@@ -8,6 +8,7 @@ import com.example.sorpluserend.SignUp.Model.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface ClientAPI
@@ -54,6 +55,13 @@ public interface ClientAPI
     @FormUrlEncoded
     Call<SpecResponse> getSpecs(
             @Field("ProductName") String prodname
+    );
+
+    @POST("AddCartClient/")
+    @FormUrlEncoded
+    Call<ResponseBody> addCart(
+            @Field("MobileNumber") String mobile,
+            @Field("PID") String pid
     );
 
     /*

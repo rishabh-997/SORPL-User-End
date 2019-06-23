@@ -75,19 +75,20 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             specs.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    listener.onNoteClick(getAdapterPosition());
+                    listener.onSpecClick(getAdapterPosition());
                 }
             });
         }
 
         @Override
         public void onClick(View v) {
-
+            listener.onProductClick(getAdapterPosition());
         }
     }
 
     public interface onNoteClickListener
     {
-        void onNoteClick(int position);
+        void onSpecClick(int position);
+        void onProductClick(int position);
     }
 }

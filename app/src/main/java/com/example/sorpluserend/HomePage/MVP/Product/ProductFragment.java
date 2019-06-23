@@ -185,9 +185,15 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
     }
 
     @Override
-    public void onNoteClick(int position)
+    public void onSpecClick(int position)
     {
         progressBar.setVisibility(View.VISIBLE);
         presenter.getSpecs(list.get(position).getName());
+    }
+
+    @Override
+    public void onProductClick(int position) {
+        progressBar.setVisibility(View.VISIBLE);
+        presenter.addCart(list.get(position).getId(),"9935685103");
     }
 }

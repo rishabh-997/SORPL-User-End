@@ -25,7 +25,7 @@ public class ProductContract
         void getCompany();
         void getSubCategory(String company);
         void getList(String subcat,String company);
-
         void getSpecs(String name);
+        void addCart(String pid,String mobile);
     }
 }

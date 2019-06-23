@@ -4,6 +4,7 @@ import com.example.sorpluserend.HomePage.Model.Product_Response;
 import com.example.sorpluserend.HomePage.Model.SpecResponse;
 import com.example.sorpluserend.HomePage.Model.SubCat_response;
 
+import com.example.sorpluserend.SignUp.Model.ResponseBody;
 import com.example.sorpluserend.Utilities.ClientAPI;
 import com.example.sorpluserend.Utilities.Utils;
 
@@ -114,6 +115,29 @@ public class ProductPresenter implements ProductContract.presenter
 
             @Override
             public void onFailure(Call<SpecResponse> call, Throwable t) {
+                mvpview.showtaost(t.getMessage());
+            }
+        });
+    }
+
+    @Override
+    public void addCart(String pid, String mobile) {
+        clientAPI.addCart(mobile,pid).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                if(response.isSuccessful())
+                {
+                    if(response.body().getMessage().equals("Successful"))
+                        mvpview.showtaost("Successfully added to cart");
+                    else
+                        mvpview.showtaost(response.body().getMessage());
+                }
+                else
+                    mvpview.showtaost(response.message());
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
                 mvpview.showtaost(t.getMessage());
             }
         });
