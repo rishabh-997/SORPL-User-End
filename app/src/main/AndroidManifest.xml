@@ -4,13 +4,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/barrel"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/barrel"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".HomePage.MVP.HomeActivity"
+            android:name=".LogIn.MVP.LogInActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,12 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LogIn.MVP.LogInActivity"
+        <activity android:name=".HomePage.MVP.HomeActivity"
             android:label="LogIn"/>
         <activity android:name=".SignUp.MVP.SignUpActivity"
             android:label="SignUp"/>
-        <activity android:name=".MainActivity"
-            android:label="Home"/>
     </application>
 
 </manifest>

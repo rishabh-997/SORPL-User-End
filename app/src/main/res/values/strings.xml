@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">SORPL User End</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_product">Products</string>
+    <string name="title_market">Market</string>
+    <string name="title_enquiry">Enquiry</string>
+    <string name="Open">open</string>
+    <string name="Close">close</string>
 </resources>
