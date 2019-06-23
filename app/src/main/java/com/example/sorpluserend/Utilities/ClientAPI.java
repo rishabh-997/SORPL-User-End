@@ -1,4 +1,6 @@
 package com.example.sorpluserend.Utilities;
+import com.example.sorpluserend.HomePage.Model.CartResponse;
+import com.example.sorpluserend.HomePage.Model.CartResponse_CUD;
 import com.example.sorpluserend.HomePage.Model.Comapny_response;
 import com.example.sorpluserend.HomePage.Model.Product_Response;
 import com.example.sorpluserend.HomePage.Model.SpecResponse;
@@ -62,6 +64,19 @@ public interface ClientAPI
     Call<ResponseBody> addCart(
             @Field("MobileNumber") String mobile,
             @Field("PID") String pid
+    );
+
+    @POST("CartDetails/")
+    @FormUrlEncoded
+    Call<CartResponse> getCart(
+            @Field("MobileNumber") String mobile,
+            @Field("Company") String company
+    );
+    @POST("DeleteCart/")
+    @FormUrlEncoded
+    Call<CartResponse_CUD> deleteProduct(
+            @Field("MobileNumber") String mobile,
+            @Field("PID") String productid
     );
 
     /*

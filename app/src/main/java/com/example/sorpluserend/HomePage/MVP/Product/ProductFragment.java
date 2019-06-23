@@ -1,4 +1,5 @@
 package com.example.sorpluserend.HomePage.MVP.Product;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -192,8 +193,27 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
     }
 
     @Override
-    public void onProductClick(int position) {
-        progressBar.setVisibility(View.VISIBLE);
-        presenter.addCart(list.get(position).getId(),"9935685103");
+    public void onProductClick(final int position)
+    {
+        final AlertDialog alertDialog=new AlertDialog.Builder(getContext()).create();
+        alertDialog.setMessage("Add Product To Cart");
+        alertDialog.setTitle("Are You Sure ?");
+        alertDialog.setCancelable(false);
+
+        alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                alertDialog.dismiss();
+                progressBar.setVisibility(View.VISIBLE);
+                presenter.addCart(list.get(position).getId(),"9935685103");
+            }
+        });
+        alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog.show();
     }
 }

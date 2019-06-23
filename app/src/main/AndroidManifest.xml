@@ -21,8 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomePage.MVP.HomeActivity"
-            android:label="LogIn"
-            android:launchMode="singleTop"/>
+            android:label="LogIn"/>
         <activity android:name=".SignUp.MVP.SignUpActivity"
             android:label="SignUp"/>
     </application>

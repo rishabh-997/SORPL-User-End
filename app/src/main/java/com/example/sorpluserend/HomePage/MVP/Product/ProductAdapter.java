@@ -49,6 +49,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             image_url="http://unbxd.com/blog/wp-content/uploads/2014/02/No-results-found.jpg";
         Picasso.get().load(image_url).into(viewHolder.imageView);
 
+
     }
 
     @Override
@@ -78,10 +79,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
                     listener.onSpecClick(getAdapterPosition());
                 }
             });
+
+            itemView.setOnClickListener(this);
         }
 
         @Override
-        public void onClick(View v) {
+        public void onClick(View v)
+        {
             listener.onProductClick(getAdapterPosition());
         }
     }
