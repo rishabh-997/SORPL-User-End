@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sorpluserend">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/barrel"
@@ -19,7 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomePage.MVP.HomeActivity"
-            android:label="LogIn"/>
+            android:label="LogIn"
+            android:launchMode="singleTop"/>
         <activity android:name=".SignUp.MVP.SignUpActivity"
             android:label="SignUp"/>
     </application>
