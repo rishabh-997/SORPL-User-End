@@ -15,6 +15,9 @@ public class CartList {
     @SerializedName("image")
     String image_url;
 
+    @SerializedName("price")
+    String price;
+
     public CartList(String name, String description, String id, String image_url, String sub_category, String size, String unit, String cost, String total_cost, String cgst, String sgst, String total_cost_tax) {
         this.name = name;
         this.description = description;
@@ -22,6 +25,13 @@ public class CartList {
         this.image_url = image_url;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public String getPrice() {
+        return price;
+    }
 
     public String getName() {
         return name;

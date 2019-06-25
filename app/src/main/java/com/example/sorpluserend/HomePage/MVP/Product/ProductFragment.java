@@ -23,6 +23,7 @@ import com.example.sorpluserend.HomePage.Model.SpecResponse;
 import com.example.sorpluserend.HomePage.Model.SubCat_list;
 import com.example.sorpluserend.HomePage.Model.SubCat_response;
 import com.example.sorpluserend.R;
+import com.example.sorpluserend.Utilities.SharedPref;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,7 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
 {
     ProductContract.presenter presenter;
     ProductAdapter adapter;
+    SharedPref sharedPref;
 
     @BindView(R.id.cart_bar)
     ProgressBar progressBar;
@@ -62,6 +64,7 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
         View view=inflater.inflate(R.layout.fragment_product, container, false);
         presenter=new ProductPresenter(this);
         ButterKnife.bind(this,view);
+        sharedPref=new SharedPref(getContext());
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -205,7 +208,7 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
             public void onClick(DialogInterface dialog, int which) {
                 alertDialog.dismiss();
                 progressBar.setVisibility(View.VISIBLE);
-                presenter.addCart(list.get(position).getId(),"9935685103");
+                presenter.addCart(list.get(position).getId(),sharedPref.getMobile());
             }
         });
         alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {

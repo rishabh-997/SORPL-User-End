@@ -13,7 +13,6 @@ import android.util.Log;
 
 import com.example.sorpluserend.R;
 import com.example.sorpluserend.SplashActivity;
-import com.example.sorpluserend.Utilities.SharedPref;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -21,7 +20,6 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import timber.log.Timber;
 
 public class MyFireBaseMessagingService extends FirebaseMessagingService
 {

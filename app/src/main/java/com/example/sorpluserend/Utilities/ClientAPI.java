@@ -86,4 +86,12 @@ public interface ClientAPI
             @Field("MobileNumber") String mobile,
             @Field("PID") String productid
     );
+
+    @POST("MarketDetails/")
+    @FormUrlEncoded
+    Call<CartResponse> getMarketPosition(
+            @Field("UserType") String user,
+            @Field("SubCatergory") String subcat,
+            @Field("Company") String company
+    );
 }

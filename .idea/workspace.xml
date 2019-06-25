@@ -11,108 +11,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24a88e59-f834-4f99-9560-22dcf465abe4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_16_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_16_2_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_auto_value_auto_value_annotations_1_6_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_core_16_0_9_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_collection_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_18_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_17_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_18_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_timber_timber_4_7_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_16_0_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/google-services.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/LogIn/Model/LogInResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/OTP/MVP/OTPActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/OTP/MVP/OTPContract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/OTP/MVP/OTPPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/OTP/Model/OTPResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Services/MyFireBaseMessagingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/SplashActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Utilities/MyApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Utilities/SharedPref.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_lock_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_phone_iphone_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_otp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketContract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/card_market_list.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_exifinterface_27_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_exifinterface_27_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_7_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_7_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_7_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_7_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_8_8_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_8_8_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/HomeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/LogIn/MVP/LogInActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/LogIn/MVP/LogInActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/LogIn/MVP/LogInContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/LogIn/MVP/LogInContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/LogIn/MVP/LogInPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/LogIn/MVP/LogInPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/CartList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/CartList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Services/MyFireBaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Services/MyFireBaseMessagingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Utilities/ClientAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Utilities/ClientAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/navigation_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/navigation_drawer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/spinnerbg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/spinnerbg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/card_prod_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card_prod_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_market.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_market.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,13 +84,13 @@
     <session id="993337000">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="18" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.111" value="1" />
           <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.23" value="1" />
@@ -176,39 +98,39 @@
           <entry key="project.open.time.60" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="12" />
-          <entry key="java" value="203" />
+          <entry key="java" value="265" />
           <entry key="json" value="1" />
           <entry key="properties" value="1" />
-          <entry key="xml" value="123" />
+          <entry key="xml" value="138" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="12" />
-          <entry key="JAVA" value="203" />
+          <entry key="JAVA" value="265" />
           <entry key="JSON" value="1" />
           <entry key="Properties" value="1" />
-          <entry key="XML" value="123" />
+          <entry key="XML" value="138" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="72" />
-          <entry key="java" value="5771" />
-          <entry key="xml" value="1047" />
+          <entry key="java" value="7161" />
+          <entry key="xml" value="1254" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5771" />
+          <entry key="JAVA" value="7161" />
           <entry key="PLAIN_TEXT" value="72" />
-          <entry key="XML" value="1047" />
+          <entry key="XML" value="1254" />
         </counts>
       </usages-collector>
     </session>
@@ -216,10 +138,20 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Services/MyFireBaseMessagingService.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_market_list.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="63" column="53" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
+            <state relative-caret-position="322">
+              <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -233,8 +165,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="resourceFile" />
-        <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -244,31 +176,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/SubCat_list.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_info_outline_black_24dp.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/card_prod_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_product.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/SpecList.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/SignUp/MVP/SignUpPresenter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/SignUp/MVP/SignUpContract.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/SignUp/Model/ResponseBody.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/SignUp/MVP/SignUpActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductContract.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductPresenter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/navigation_cart.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/navigation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/CartResponse.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/CartList.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_cart.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_delete_black_24dp.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/CartResponse_CUD.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartPresenter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartContract.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/card_cartlist.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/LogIn/Model/LogInResponse.java" />
@@ -283,18 +203,30 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_lock_black_24dp.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_phone_iphone_black_24dp.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/SplashActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Utilities/ClientAPI.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/LogIn/MVP/LogInActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_otp.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/OTP/MVP/OTPActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Services/MyFireBaseInstanceIDService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Utilities/SharedPref.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/HomeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Services/MyFireBaseMessagingService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/CartList.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketPresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketContract.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_market.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Utilities/ClientAPI.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/spinnerbg.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/card_market_list.xml" />
       </list>
     </option>
   </component>
@@ -312,17 +244,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SORPL-User-End" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -335,6 +256,79 @@
               <item name="SORPL-User-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="SORPL-User-End" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SORPL-User-End" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="SORPL-User-End" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="SORPL-User-End" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="sorpluserend" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SORPL-User-End" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="sorpluserend" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="HomePage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SORPL-User-End" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="sorpluserend" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="HomePage" type="462c0819:PsiDirectoryNode" />
+              <item name="MVP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SORPL-User-End" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="sorpluserend" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="HomePage" type="462c0819:PsiDirectoryNode" />
+              <item name="MVP" type="462c0819:PsiDirectoryNode" />
+              <item name="Market" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SORPL-User-End" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="sorpluserend" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="HomePage" type="462c0819:PsiDirectoryNode" />
+              <item name="MVP" type="462c0819:PsiDirectoryNode" />
+              <item name="Product" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SORPL-User-End" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="sorpluserend" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SORPL-User-End" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="SORPL-User-End" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -487,7 +481,7 @@
     <frame x="0" y="25" width="1366" height="686" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.3242424" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.3128788" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -495,13 +489,13 @@
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.5917266" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.7589928" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.6079137" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="5" weight="0.67805755" />
+      <window_info anchor="bottom" id="Build" order="5" weight="0.52517986" />
       <window_info anchor="bottom" id="Android Profiler" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.7805755" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.7715827" />
       <window_info anchor="bottom" id="Debug" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3291367" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -509,7 +503,7 @@
       <window_info anchor="right" id="Gradle" order="2" weight="0.32954547" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Preview" order="5" weight="0.24621212" />
+      <window_info active="true" anchor="right" id="Preview" order="5" visible="true" weight="0.24621212" />
     </layout>
     <layout-to-restore>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
@@ -542,161 +536,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/SignUp/MVP/SignUpPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/SignUp/MVP/SignUpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="87" column="165" selection-start-line="87" selection-start-column="165" selection-end-line="87" selection-end-column="165" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/SignUp/Model/ResponseBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/navigation_cart.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_black_24dp.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_market.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/navigation.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/CartResponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_delete_black_24dp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="67" selection-start-column="67" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cart.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="834">
-          <caret line="140" column="48" selection-start-line="140" selection-start-column="48" selection-end-line="140" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_cartlist.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/CartList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/google-services.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Utilities/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/CartResponse_CUD.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -725,13 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/LogIn/MVP/LogInContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/OTP/MVP/OTPPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -754,24 +586,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/navigation_drawer.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_phone_iphone_black_24dp.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="64" selection-start-column="64" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Utilities/ClientAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="87" column="6" selection-start-line="87" selection-start-column="6" selection-end-line="87" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -783,20 +608,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-276">
           <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_product.xml">
       <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="9" selection-end-line="19" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/LogIn/MVP/LogInActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -806,40 +623,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_otp.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/OTP/MVP/OTPActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/spinnerbg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -851,14 +653,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Services/MyFireBaseInstanceIDService.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -866,29 +660,256 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/HomeActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        <state relative-caret-position="165">
+          <caret line="11" column="100" selection-start-line="11" selection-start-column="100" selection-end-line="11" selection-end-column="100" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding>
+            <element signature="e#876#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Services/MyFireBaseMessagingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="58" column="50" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Utilities/SharedPref.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Services/MyFireBaseMessagingService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/CartResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_cartlist.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/Product_Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/ProductList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_prod_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="31" lean-forward="true" selection-end-line="65" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/Model/CartList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="63" column="53" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="74" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cart.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="45" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="25" selection-end-column="45" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="55" column="48" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/LogIn/MVP/LogInContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/SignUp/MVP/SignUpContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/SignUp/MVP/SignUpActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-570">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Cart/CartPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-615">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="70" column="5" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="70" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="143" column="9" lean-forward="true" selection-start-line="143" selection-start-column="9" selection-end-line="143" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_product.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="18" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="36" selection-end-column="18" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/spinnerbg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_market.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="122" column="9" lean-forward="true" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/Utilities/ClientAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="94" column="44" lean-forward="true" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Product/ProductAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="62" column="20" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sorpluserend/HomePage/MVP/Market/MarketAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_market_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
   <component name="masterDetails">

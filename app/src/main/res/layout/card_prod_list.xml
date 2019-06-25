@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/prodlist_name"
+        android:id="@+id/marketlist_name"
         android:text="Product name : name"
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -23,15 +23,15 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_below="@id/prodlist_name"
+        android:layout_below="@id/marketlist_name"
         android:background="@android:color/black"
         />
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:id="@+id/prodlist_image"
+        android:id="@+id/marketlist_image"
         android:src="@drawable/ic_launcher_background"
-        android:layout_below="@id/prodlist_name"
+        android:layout_below="@id/marketlist_name"
         android:layout_margin="8dp"
         android:scaleType="centerCrop"/>
     <LinearLayout
@@ -39,8 +39,8 @@
         android:layout_height="150dp"
         android:orientation="vertical"
         android:layout_marginTop="8dp"
-        android:layout_below="@id/prodlist_name"
-        android:layout_toRightOf="@id/prodlist_image">
+        android:layout_below="@id/marketlist_name"
+        android:layout_toRightOf="@id/marketlist_image">
 
 
             <TextView

@@ -68,9 +68,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         {
             super(itemView);
             listener=onNoteClickListener;
-            name=itemView.findViewById(R.id.prodlist_name);
+            name=itemView.findViewById(R.id.marketlist_name);
             description=itemView.findViewById(R.id.prodlist_description);
-            imageView=itemView.findViewById(R.id.prodlist_image);
+            imageView=itemView.findViewById(R.id.marketlist_image);
             specs=itemView.findViewById(R.id.prodlist_specs);
 
             specs.setOnClickListener(new View.OnClickListener() {
