@@ -16,4 +16,14 @@
         android:icon="@drawable/ic_perm_contact_calendar_black_24dp"
         android:title="Contact Us" />
 
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_phone_iphone_black_24dp"
+        android:title="My Profile" />
+
+    <item
+        android:id="@+id/navigation_logout"
+        android:icon="@drawable/ic_lock_black_24dp"
+        android:title="Log Out" />
+
 </menu>

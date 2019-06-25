@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
+    android:orientation="vertical"
     android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true">
+
+
+    <ProgressBar
+        android:id="@+id/login_bar"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/DarkerGrey" />
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -11,6 +24,7 @@
         android:paddingTop="56dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
+
 
         <ImageView android:src="@drawable/barrel"
             android:layout_width="wrap_content"
@@ -25,8 +39,10 @@
             android:layout_marginBottom="8dp">
             <EditText android:id="@+id/input_email"
                 android:layout_width="match_parent"
+                android:inputType="number"
+                android:maxLength="10"
                 android:layout_height="wrap_content"
-                android:hint="Email" />
+                android:hint="Mobile" />
         </android.support.design.widget.TextInputLayout>
 
         <!--  Password Label -->
@@ -34,6 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:visibility="gone"
             android:layout_marginBottom="8dp">
             <EditText android:id="@+id/input_password"
                 android:layout_width="match_parent"
@@ -50,7 +67,7 @@
             android:layout_marginBottom="24dp"
             android:padding="12dp"
             android:background="@drawable/gradbutton"
-            android:text="Login"/>
+            android:text="Get OTP"/>
 
         <TextView android:id="@+id/link_signup"
             android:layout_width="fill_parent"
@@ -61,4 +78,4 @@
             android:textSize="16dip"/>
 
     </LinearLayout>
-</ScrollView>
+</LinearLayout>

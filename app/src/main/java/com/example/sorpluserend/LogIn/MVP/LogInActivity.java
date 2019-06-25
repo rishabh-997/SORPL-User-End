@@ -9,12 +9,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sorpluserend.HomePage.MVP.HomeActivity;
+import com.example.sorpluserend.OTP.MVP.OTPActivity;
 import com.example.sorpluserend.R;
 import com.example.sorpluserend.SignUp.MVP.SignUpActivity;
+import com.example.sorpluserend.Utilities.MyApplication;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,6 +35,8 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.vi
     Button _loginButton;
     @BindView(R.id.link_signup)
     TextView _signupLink;
+    @BindView(R.id.login_bar)
+    ProgressBar progressBar;
     LogInContract.presenter presenter;
 
     @Override
@@ -65,10 +70,18 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.vi
 
     private void login()
     {
-        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-        startActivityForResult(intent, REQUEST_SIGNUP);
-        finish();
-        overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+        if(_emailText.getText().toString().isEmpty()||_emailText.getText().toString().length()!=10)
+        {
+            _emailText.setError("Enter Valid Mobile");
+        }
+        else
+        {
+            progressBar.setVisibility(View.VISIBLE);
+            String fcm= MyApplication.getFcm();
+            String mobile=_emailText.getText().toString();
+
+            presenter.dologin(mobile,fcm);
+        }
     }
 
 
@@ -77,11 +90,25 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.vi
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
 
-                // TODO: Implement successful signup logic here
-                // By default we just finish the Activity and log them in automatically
                 this.finish();
             }
         }
     }
 
+    @Override
+    public void showToast(String message) {
+        progressBar.setVisibility(View.GONE);
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void OTPPage() {
+
+        progressBar.setVisibility(View.GONE);
+        Intent intent = new Intent(getApplicationContext(), OTPActivity.class);
+        intent.putExtra("Mobile",_emailText.getText().toString());
+        startActivityForResult(intent, REQUEST_SIGNUP);
+        finish();
+        overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+    }
 }

@@ -5,6 +5,8 @@ import com.example.sorpluserend.HomePage.Model.Comapny_response;
 import com.example.sorpluserend.HomePage.Model.Product_Response;
 import com.example.sorpluserend.HomePage.Model.SpecResponse;
 import com.example.sorpluserend.HomePage.Model.SubCat_response;
+import com.example.sorpluserend.LogIn.Model.LogInResponse;
+import com.example.sorpluserend.OTP.Model.OTPResponse;
 import com.example.sorpluserend.SignUp.Model.ResponseBody;
 
 import retrofit2.Call;
@@ -15,15 +17,21 @@ import retrofit2.http.POST;
 
 public interface ClientAPI
 {
-    /*
-    @POST("admin_login/")
+
+    @POST("login/")
     @FormUrlEncoded
     Call<LogInResponse> login(
-            @Field("mobile") String mobile,
-            @Field("password") String password,
+            @Field("Mobile") String mobile,
             @Field("fcm") String fcm
     );
-    */
+
+    @POST("verify/")
+    @FormUrlEncoded
+    Call<OTPResponse> verify(
+            @Field("Mobile") String mobile,
+            @Field("OTP") String otp
+    );
+
     @POST("new_registrations/")
     @FormUrlEncoded
     Call<ResponseBody> createClient(
@@ -78,13 +86,4 @@ public interface ClientAPI
             @Field("MobileNumber") String mobile,
             @Field("PID") String productid
     );
-
-    /*
-    @POST("GetUnitData/")
-    @FormUrlEncoded
-    Call<UnitResponse> getUnits(
-            @Field("mob") String mob
-    );
-
-    */
 }

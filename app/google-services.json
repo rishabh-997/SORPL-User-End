@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "779659215285",
+    "firebase_url": "https://sorpl-client.firebaseio.com",
+    "project_id": "sorpl-client",
+    "storage_bucket": "sorpl-client.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779659215285:android:d88387bf7e3882e0",
+        "android_client_info": {
+          "package_name": "com.example.sorpluserend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779659215285-buv5f5uqikge0c7g2820o5jnhvev3lmh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sorpluserend",
+            "certificate_hash": "5cb9df8ee8a976572adaab3240a84ee6a3b9e2b8"
+          }
+        },
+        {
+          "client_id": "779659215285-n8not4v8dfg0ij7f8255oq2124n3256j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVoZNtsP41r4iJGSc2sZqIPHRnZLw_C4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779659215285-n8not4v8dfg0ij7f8255oq2124n3256j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
