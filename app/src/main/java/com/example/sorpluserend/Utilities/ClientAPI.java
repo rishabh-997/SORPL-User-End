@@ -1,4 +1,5 @@
 package com.example.sorpluserend.Utilities;
+import com.example.sorpluserend.ContactUs.Model.ContactResponse;
 import com.example.sorpluserend.HomePage.Model.CartResponse;
 import com.example.sorpluserend.HomePage.Model.CartResponse_CUD;
 import com.example.sorpluserend.HomePage.Model.Comapny_response;
@@ -93,5 +94,11 @@ public interface ClientAPI
             @Field("UserType") String user,
             @Field("SubCatergory") String subcat,
             @Field("Company") String company
+    );
+
+    @POST("contact_us/")
+    @FormUrlEncoded
+    Call<ContactResponse> getContact(
+            @Field("anything") String mob
     );
 }

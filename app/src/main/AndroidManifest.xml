@@ -43,6 +43,10 @@
             android:label="OTP" />
         <activity android:name=".LogIn.MVP.LogInActivity"
             android:label="Log In"></activity>
+        <activity android:name=".ContactUs.MVP.ContactActivity"
+            android:label="Contact Us"/>
+        <activity android:name=".FAQ.MVP.FAQActivity"
+            android:label="FAQ's"/>
     </application>
 
 </manifest>
