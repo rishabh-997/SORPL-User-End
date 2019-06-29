@@ -1,12 +1,14 @@
 package com.example.sorpluserend.HomePage.MVP.Cart;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.sorpluserend.HomePage.Model.CartList;
@@ -49,6 +51,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
+        RelativeLayout linearLayout;
         ImageView image,dustbin;
         TextView name;
         onNoteClickListener listener;
@@ -59,6 +62,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>
             name=itemView.findViewById(R.id.cart_name);
             image=itemView.findViewById(R.id.cart_image);
             dustbin=itemView.findViewById(R.id.cart_delete);
+            linearLayout=itemView.findViewById(R.id.cart_layout);
 
             dustbin.setOnClickListener(new View.OnClickListener() {
                 @Override

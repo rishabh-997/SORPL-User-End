@@ -1,4 +1,5 @@
 package com.example.sorpluserend.HomePage.MVP.Product;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.sorpluserend.HomePage.MVP.Cart.CartFragment;
 import com.example.sorpluserend.HomePage.Model.Comapany_list;
 import com.example.sorpluserend.HomePage.Model.Comapny_response;
 import com.example.sorpluserend.HomePage.Model.ProductList;
@@ -33,6 +35,7 @@ import butterknife.ButterKnife;
 
 public class ProductFragment extends Fragment implements ProductContract.view,ProductAdapter.onNoteClickListener
 {
+    ProductFragmentListener listener;
     ProductContract.presenter presenter;
     ProductAdapter adapter;
     SharedPref sharedPref;
@@ -176,6 +179,14 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
         builder.show();
     }
 
+    @Override
+    public void updateMyCart(String successfully_added_to_cart)
+    {
+        progressBar.setVisibility(View.GONE);
+        Toast.makeText(getContext(), "Added Successfully to Cart", Toast.LENGTH_SHORT).show();
+        listener.UPdateCart();
+    }
+
     private void setCategory(String Company)
     {
         for(int i=0;i<comapany_list.size();i++)
@@ -218,5 +229,33 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
             }
         });
         alertDialog.show();
+    }
+
+    /**
+     * below are functions to connect to CartFragment so we can refresh cart
+     */
+
+    public interface ProductFragmentListener
+    {
+        void UPdateCart();
+    }
+    @Override
+    public void onAttach(Context context)
+    {
+        super.onAttach(context);
+        if(context instanceof CartFragment.CartFragmentListener)
+        {
+            listener=(ProductFragmentListener) context;
+        }
+        else
+        {
+            throw new RuntimeException(context.toString()+"must be implemented");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        listener=null;
     }
 }

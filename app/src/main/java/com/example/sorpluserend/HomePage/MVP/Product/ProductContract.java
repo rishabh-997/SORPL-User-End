@@ -19,6 +19,8 @@ public class ProductContract
         void showdata(Product_Response body);
 
         void showSpecs(SpecResponse body);
+
+        void updateMyCart(String successfully_added_to_cart);
     }
     interface presenter
     {

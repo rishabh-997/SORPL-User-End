@@ -2,6 +2,7 @@ package com.example.sorpluserend.HomePage.MVP.Market;
 
 import com.example.sorpluserend.HomePage.Model.CartResponse;
 import com.example.sorpluserend.HomePage.Model.Comapny_response;
+import com.example.sorpluserend.HomePage.Model.MarketResponse;
 import com.example.sorpluserend.HomePage.Model.SubCat_response;
 import com.example.sorpluserend.Utilities.ClientAPI;
 import com.example.sorpluserend.Utilities.Utils;
@@ -20,10 +21,10 @@ public class MarketPresenter implements MarketContract.presenter
     }
 
     @Override
-    public void getMarket(String client, String company, String subcat) {
-        clientAPI.getMarketPosition(client,subcat,company).enqueue(new Callback<CartResponse>() {
+    public void getList() {
+        clientAPI.getMarketPosition("Client").enqueue(new Callback<MarketResponse>() {
             @Override
-            public void onResponse(Call<CartResponse> call, Response<CartResponse> response) {
+            public void onResponse(Call<MarketResponse> call, Response<MarketResponse> response) {
                 if(response.isSuccessful())
                 {
                     if(response.body().getMessage().equals("successful"))
@@ -31,59 +32,6 @@ public class MarketPresenter implements MarketContract.presenter
                         mvpview.showList(response.body());
                     }
                     else
-                    {
-                        mvpview.toast(response.body().getMessage());
-                    }
-                }
-                else
-                {
-                    mvpview.toast(response.message());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<CartResponse> call, Throwable t) {
-                mvpview.toast(t.getMessage());
-            }
-        });
-    }
-
-    @Override
-    public void getCompany() {
-        clientAPI.getCompany("9935685103").enqueue(new Callback<Comapny_response>() {
-            @Override
-            public void onResponse(Call<Comapny_response> call, Response<Comapny_response> response) {
-                if(response.isSuccessful())
-                {
-                    if(response.body().getMessage().equals("successful"))
-                    {
-                        mvpview.showCompanies(response.body());
-                    }
-                    else
-                        mvpview.toast(response.body().getMessage());
-                }
-                else
-                    mvpview.toast(response.message());
-            }
-            @Override
-            public void onFailure(Call<Comapny_response> call, Throwable t) {
-                mvpview.toast(t.getMessage());
-            }
-        });
-    }
-
-    @Override
-    public void getSubCategory(String company) {
-        clientAPI.getSubCat(company).enqueue(new Callback<SubCat_response>() {
-            @Override
-            public void onResponse(Call<SubCat_response> call, Response<SubCat_response> response) {
-                if(response.isSuccessful())
-                {
-                    if(response.body().getMessage().equals("successful"))
-                    {
-                        mvpview.showSubCategories(response.body());
-                    }
-                    else
                         mvpview.toast(response.body().getMessage());
                 }
                 else
@@ -91,7 +39,7 @@ public class MarketPresenter implements MarketContract.presenter
             }
 
             @Override
-            public void onFailure(Call<SubCat_response> call, Throwable t) {
+            public void onFailure(Call<MarketResponse> call, Throwable t) {
                 mvpview.toast(t.getMessage());
             }
         });

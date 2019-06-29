@@ -3,6 +3,7 @@ import com.example.sorpluserend.ContactUs.Model.ContactResponse;
 import com.example.sorpluserend.HomePage.Model.CartResponse;
 import com.example.sorpluserend.HomePage.Model.CartResponse_CUD;
 import com.example.sorpluserend.HomePage.Model.Comapny_response;
+import com.example.sorpluserend.HomePage.Model.MarketResponse;
 import com.example.sorpluserend.HomePage.Model.Product_Response;
 import com.example.sorpluserend.HomePage.Model.SpecResponse;
 import com.example.sorpluserend.HomePage.Model.SubCat_response;
@@ -90,10 +91,8 @@ public interface ClientAPI
 
     @POST("MarketDetails/")
     @FormUrlEncoded
-    Call<CartResponse> getMarketPosition(
-            @Field("UserType") String user,
-            @Field("SubCatergory") String subcat,
-            @Field("Company") String company
+    Call<MarketResponse> getMarketPosition(
+            @Field("UserType") String user
     );
 
     @POST("contact_us/")

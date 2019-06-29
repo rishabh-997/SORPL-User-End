@@ -1,10 +1,12 @@
 package com.example.sorpluserend.HomePage.MVP.Cart;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +19,7 @@ import com.example.sorpluserend.R;
 import com.example.sorpluserend.Utilities.SharedPref;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;
@@ -24,6 +27,7 @@ import butterknife.ButterKnife;
 
 public class CartFragment extends Fragment implements CartContract.view,CartAdapter.onNoteClickListener
 {
+    CartFragmentListener listener;
     CartContract.presenter presenter;
     SharedPref sharedPref;
 
@@ -53,7 +57,7 @@ public class CartFragment extends Fragment implements CartContract.view,CartAdap
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         progressBar.setVisibility(View.VISIBLE);
-        presenter.getCart(sharedPref.getMobile(),"SORPL");
+        presenter.getCart(sharedPref.getMobile(),"All");
 
         return view;
     }
@@ -69,6 +73,7 @@ public class CartFragment extends Fragment implements CartContract.view,CartAdap
         progressBar.setVisibility(View.GONE);
         list.clear();
         list=body.getList();
+        Collections.reverse(list);
         adapter=new CartAdapter(list,getContext(),this);
         recyclerView.setAdapter(adapter);
     }
@@ -81,6 +86,37 @@ public class CartFragment extends Fragment implements CartContract.view,CartAdap
 
     @Override
     public void delete(int pos, String message) {
-        presenter.getCart(sharedPref.getMobile(),"SORPL");
+        presenter.getCart(sharedPref.getMobile(),"All");
+    }
+
+    public void RefreshCart()
+    {
+        progressBar.setVisibility(View.VISIBLE);
+        presenter.getCart(sharedPref.getMobile(),"All");
+    }
+
+    public interface CartFragmentListener
+    {
+
+    }
+
+    @Override
+    public void onAttach(Context context)
+    {
+        super.onAttach(context);
+        if(context instanceof CartFragmentListener)
+        {
+            listener=(CartFragmentListener) context;
+        }
+        else
+        {
+            throw new RuntimeException(context.toString()+"must be implemented");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        listener=null;
     }
 }

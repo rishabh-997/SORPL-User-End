@@ -2,6 +2,7 @@ package com.example.sorpluserend.HomePage.MVP.Market;
 
 import com.example.sorpluserend.HomePage.Model.CartResponse;
 import com.example.sorpluserend.HomePage.Model.Comapny_response;
+import com.example.sorpluserend.HomePage.Model.MarketResponse;
 import com.example.sorpluserend.HomePage.Model.SubCat_response;
 
 public class MarketContract
@@ -10,16 +11,13 @@ public class MarketContract
     {
         void toast(String message);
 
-        void showList(CartResponse body);
-        void showCompanies(Comapny_response body);
+        void showList(MarketResponse body);
 
-        void showSubCategories(SubCat_response body);
 
     }
     interface presenter
     {
-        void getCompany();
-        void getSubCategory(String company);
-        void getMarket(String client,String company, String subcat);
+
+        void getList();
     }
 }

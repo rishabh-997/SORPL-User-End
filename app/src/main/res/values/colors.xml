@@ -5,4 +5,7 @@
     <color name="colorAccent">#D7CABD</color>
     <color name="DarkerGrey">#A09DB0</color>
     <color name="LighterGrey">#CFCDD7</color>
+    <color name="ColorAccentLight">#ECEAF5</color>
+    <color name="Red">#AF0202</color>
+    <color name="Green">#05AA5A</color>
 </resources>

@@ -128,7 +128,7 @@ public class ProductPresenter implements ProductContract.presenter
                 if(response.isSuccessful())
                 {
                     if(response.body().getMessage().equals("Successful"))
-                        mvpview.showtaost("Successfully added to cart");
+                        mvpview.updateMyCart("Successfully added to cart");
                     else
                         mvpview.showtaost(response.body().getMessage());
                 }

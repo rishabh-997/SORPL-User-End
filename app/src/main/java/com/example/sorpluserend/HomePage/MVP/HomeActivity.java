@@ -12,6 +12,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,7 +31,7 @@ import com.example.sorpluserend.Utilities.SharedPref;
 
 import timber.log.Timber;
 
-public class HomeActivity extends AppCompatActivity implements HomeContract.view
+public class HomeActivity extends AppCompatActivity implements HomeContract.view, CartFragment.CartFragmentListener, ProductFragment.ProductFragmentListener
 {
     HomeContract.presenter presenter;
     DrawerLayout dl;
@@ -127,5 +128,10 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
     public boolean onOptionsItemSelected(MenuItem item)
     {
         return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void UPdateCart() {
+        ((CartFragment)fragment4).RefreshCart();
     }
 }
