@@ -67,23 +67,22 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
             _nameText.setError("Enter Name");
             _nameText.requestFocus();
         }
-        if(_mobileText.getText().toString().isEmpty())
+        else if(_addressText.getText().toString().isEmpty())
         {
-            _mobileText.setError("Enter Mobile");
-            _mobileText.requestFocus();
+            _addressText.setError("Enter Company");
+            _addressText.requestFocus();
         }
-        if(_emailText.getText().toString().isEmpty())
+        else if(_emailText.getText().toString().isEmpty())
         {
             _emailText.setError("Enter Email ID");
             _emailText.requestFocus();
         }
-        if(_addressText.getText().toString().isEmpty())
+        else if(_mobileText.getText().toString().isEmpty() || _mobileText.getText().toString().length()!=10)
         {
-            _addressText.setError("Enter Comapny");
-            _addressText.requestFocus();
+            _mobileText.setError("Enter Valid Mobile");
+            _mobileText.requestFocus();
         }
-
-        if(!(_nameText.getText().toString().isEmpty())&&!(_mobileText.getText().toString().isEmpty())&&!(_emailText.getText().toString().isEmpty())&&!(_addressText.getText().toString().isEmpty()))
+        else
         {
             presenter.createUser(_nameText.getText().toString(),_mobileText.getText().toString(),_emailText.getText().toString(),_addressText.getText().toString(),"client");
         }

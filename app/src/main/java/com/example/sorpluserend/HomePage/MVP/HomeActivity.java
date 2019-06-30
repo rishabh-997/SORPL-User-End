@@ -1,5 +1,6 @@
 package com.example.sorpluserend.HomePage.MVP;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,11 +12,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.sorpluserend.AboutUs.AboutUsActivity;
@@ -31,6 +34,8 @@ import com.example.sorpluserend.Utilities.MyApplication;
 import com.example.sorpluserend.Utilities.SharedPref;
 
 import timber.log.Timber;
+
+import static com.example.sorpluserend.Utilities.MyApplication.getContext;
 
 public class HomeActivity extends AppCompatActivity implements HomeContract.view, CartFragment.CartFragmentListener, ProductFragment.ProductFragmentListener
 {
@@ -78,13 +83,10 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
                 int id=menuItem.getItemId();
                 if(id==R.id.navigation_logout)
                 {
-                    finish();
-                    sharedPref.setMobile("");
-                    sharedPref.setAccessToken("");
-                    startActivity(new Intent(HomeActivity.this, LogInActivity.class));
+                    logout();
                 }
                 else if(id==R.id.navigation_profile)
-                    Toast.makeText(HomeActivity.this, "Mobile is "+sharedPref.getMobile(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomeActivity.this, "Mobile is "+sharedPref.getMobile(), Toast.LENGTH_LONG).show();
                 else if(id==R.id.navigation_contactus)
                     startActivity(new Intent(HomeActivity.this, ContactActivity.class));
                 else if(id==R.id.navigation_faq)
@@ -94,6 +96,32 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
                 return true;
             }
         });
+    }
+
+    private void logout()
+    {
+        final AlertDialog alertDialog=new AlertDialog.Builder(this).create();
+        alertDialog.setTitle("LOG OUT");
+        alertDialog.setMessage("Are You Sure you want to logout ?");
+        alertDialog.setCancelable(false);
+
+        alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                alertDialog.dismiss();
+                finish();
+                sharedPref.setMobile("");
+                sharedPref.setAccessToken("");
+                startActivity(new Intent(HomeActivity.this, LogInActivity.class));
+            }
+        });
+        alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog.show();
     }
 
     BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -134,5 +162,29 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
     @Override
     public void UPdateCart() {
         ((CartFragment)fragment4).RefreshCart();
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        final AlertDialog alertDialog=new AlertDialog.Builder(this).create();
+        alertDialog.setTitle("EXIT");
+        alertDialog.setMessage("Are You Sure you want to exit ?");
+        alertDialog.setCancelable(false);
+
+        alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                alertDialog.dismiss();
+                HomeActivity.super.onBackPressed();
+            }
+        });
+        alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog.show();
     }
 }

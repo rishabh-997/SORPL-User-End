@@ -2,6 +2,7 @@ package com.example.sorpluserend.HomePage.MVP.Cart;
 
 import com.example.sorpluserend.HomePage.Model.CartResponse;
 import com.example.sorpluserend.HomePage.Model.CartResponse_CUD;
+import com.example.sorpluserend.HomePage.Model.EnquiryResponse;
 import com.example.sorpluserend.Utilities.ClientAPI;
 import com.example.sorpluserend.Utilities.Utils;
 
@@ -76,6 +77,35 @@ public class CartPresenter implements CartContract.presenter
             @Override
             public void onFailure(Call<CartResponse_CUD> call, Throwable t) {
 
+            }
+        });
+    }
+
+    @Override
+    public void send(String accessToken) {
+        clientAPI.sendEnquiry(accessToken).enqueue(new Callback<EnquiryResponse>() {
+            @Override
+            public void onResponse(Call<EnquiryResponse> call, Response<EnquiryResponse> response) {
+                if(response.isSuccessful())
+                {
+                    if(response.body().getMessage().equals("Enquiry Sent"))
+                    {
+                        mvpview.toast(response.body().getMessage());
+                    }
+                    else
+                    {
+                        mvpview.toast(response.body().getMessage());
+                    }
+                }
+                else
+                {
+                    mvpview.toast(response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<EnquiryResponse> call, Throwable t) {
+                mvpview.toast(t.getMessage());
             }
         });
     }

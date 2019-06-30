@@ -39,8 +39,18 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>
     @Override
     public void onBindViewHolder(@NonNull CartAdapter.ViewHolder viewHolder, int i)
     {
+
+        if(i%2==1) {
+            viewHolder.linearLayout.setBackgroundColor(Color.parseColor("#ECEAF5"));
+        }
+        else
+        {
+            viewHolder.linearLayout.setBackgroundColor(Color.parseColor("#ffffff"));
+        }
+
         CartList cartList=list.get(i);
         viewHolder.name.setText(cartList.getName());
+        viewHolder.sub.setText(cartList.getSubcat());
         Picasso.get().load(cartList.getImage_url()).into(viewHolder.image);
     }
 
@@ -53,7 +63,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>
     {
         RelativeLayout linearLayout;
         ImageView image,dustbin;
-        TextView name;
+        TextView name,sub;
         onNoteClickListener listener;
 
         public ViewHolder(@NonNull View itemView,onNoteClickListener onNoteClickListener) {
@@ -62,6 +72,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>
             name=itemView.findViewById(R.id.cart_name);
             image=itemView.findViewById(R.id.cart_image);
             dustbin=itemView.findViewById(R.id.cart_delete);
+            sub=itemView.findViewById(R.id.cart_subcat);
             linearLayout=itemView.findViewById(R.id.cart_layout);
 
             dustbin.setOnClickListener(new View.OnClickListener() {

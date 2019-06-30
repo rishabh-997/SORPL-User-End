@@ -3,6 +3,7 @@ import com.example.sorpluserend.ContactUs.Model.ContactResponse;
 import com.example.sorpluserend.HomePage.Model.CartResponse;
 import com.example.sorpluserend.HomePage.Model.CartResponse_CUD;
 import com.example.sorpluserend.HomePage.Model.Comapny_response;
+import com.example.sorpluserend.HomePage.Model.EnquiryResponse;
 import com.example.sorpluserend.HomePage.Model.MarketResponse;
 import com.example.sorpluserend.HomePage.Model.Product_Response;
 import com.example.sorpluserend.HomePage.Model.SpecResponse;
@@ -99,5 +100,21 @@ public interface ClientAPI
     @FormUrlEncoded
     Call<ContactResponse> getContact(
             @Field("anything") String mob
+    );
+
+    @POST("SendProductEnquiry/")
+    @FormUrlEncoded
+    Call<EnquiryResponse> sendEnquiry(
+            @Field("access_token") String token
+    );
+
+    @POST("AddEnquiry/")
+    @FormUrlEncoded
+    Call<EnquiryResponse> sendEmail(
+            @Field("Name") String name,
+            @Field("MobileNumber") String mobile,
+            @Field("EmailId") String email,
+            @Field("Company") String company,
+            @Field("Message") String message
     );
 }

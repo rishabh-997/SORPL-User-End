@@ -2,8 +2,10 @@ package com.example.sorpluserend.HomePage.MVP.Cart;
 
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -11,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sorpluserend.HomePage.Model.CartList;
@@ -35,6 +38,8 @@ public class CartFragment extends Fragment implements CartContract.view,CartAdap
     RecyclerView recyclerView;
     @BindView(R.id.asli_cart_bar)
     ProgressBar progressBar;
+    @BindView(R.id.cart_send)
+    TextView send;
 
     CartAdapter adapter;
     List<CartList> list=new ArrayList<>();
@@ -59,13 +64,50 @@ public class CartFragment extends Fragment implements CartContract.view,CartAdap
         progressBar.setVisibility(View.VISIBLE);
         presenter.getCart(sharedPref.getMobile(),"All");
 
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendRequest();
+            }
+        });
+
         return view;
     }
 
+    private void sendRequest()
+    {
+        if(list.size()==0)
+            Toast.makeText(getContext(), "Cart is Empty", Toast.LENGTH_SHORT).show();
+        else {
+            progressBar.setVisibility(View.VISIBLE);
+            presenter.send(sharedPref.getAccessToken());
+        }
+    }
+
     @Override
-    public void clickdelete(int pos) {
-        progressBar.setVisibility(View.VISIBLE);
-        presenter.deleteCart(sharedPref.getMobile(),list.get(pos).getId(),pos);
+    public void clickdelete(final int pos) {
+
+        final AlertDialog alertDialog=new AlertDialog.Builder(getContext()).create();
+        alertDialog.setMessage("Add Product To Cart");
+        alertDialog.setTitle("Are You Sure ?");
+        alertDialog.setCancelable(false);
+
+        alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                alertDialog.dismiss();
+                progressBar.setVisibility(View.VISIBLE);
+                presenter.deleteCart(sharedPref.getMobile(),list.get(pos).getId(),pos);
+            }
+        });
+        alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog.show();
+
     }
 
     @Override

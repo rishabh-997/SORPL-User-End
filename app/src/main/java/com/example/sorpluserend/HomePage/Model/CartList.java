@@ -18,11 +18,18 @@ public class CartList {
     @SerializedName("price")
     String price;
 
+    @SerializedName("sub_category")
+    String subcat;
+
     public CartList(String name, String description, String id, String image_url, String sub_category, String size, String unit, String cost, String total_cost, String cgst, String sgst, String total_cost_tax) {
         this.name = name;
         this.description = description;
         this.id = id;
         this.image_url = image_url;
+    }
+
+    public String getSubcat() {
+        return subcat;
     }
 
     public String getDescription() {
