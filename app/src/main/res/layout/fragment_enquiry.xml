@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".HomePage.MVP.Enquiry.EnquiryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif"
+        android:id="@+id/text"
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Enquiry" />
+        android:layout_height="wrap_content"
+        android:text="Enter the Query you and we will come back to you shortly..."/>
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/enquirytext"
+        android:layout_below="@+id/text"
+        android:layout_above="@+id/enquirybutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Enquiry"
+        android:gravity="top"
+        android:layout_margin="12dp" />
+
+    <Button
+        android:id="@+id/enquirybutton"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_height="30dp"
+        android:text="SEND"
+        android:textScaleX="1.2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/gradbutton"
+        android:textSize="15sp"/>
+
+</RelativeLayout>

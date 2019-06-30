@@ -47,6 +47,8 @@
             android:label="Contact Us"/>
         <activity android:name=".FAQ.MVP.FAQActivity"
             android:label="FAQ's"/>
+        <activity android:name=".AboutUs.AboutUsActivity"
+            android:label="About Us"/>
     </application>
 
 </manifest>

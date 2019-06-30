@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.sorpluserend.AboutUs.AboutUsActivity;
 import com.example.sorpluserend.ContactUs.MVP.ContactActivity;
 import com.example.sorpluserend.FAQ.MVP.FAQActivity;
 import com.example.sorpluserend.HomePage.MVP.Cart.CartFragment;
@@ -83,13 +84,13 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
                     startActivity(new Intent(HomeActivity.this, LogInActivity.class));
                 }
                 else if(id==R.id.navigation_profile)
-                {
                     Toast.makeText(HomeActivity.this, "Mobile is "+sharedPref.getMobile(), Toast.LENGTH_SHORT).show();
-                }
                 else if(id==R.id.navigation_contactus)
                     startActivity(new Intent(HomeActivity.this, ContactActivity.class));
                 else if(id==R.id.navigation_faq)
                     startActivity(new Intent(HomeActivity.this, FAQActivity.class));
+                else if(id==R.id.navigation_about)
+                    startActivity(new Intent(HomeActivity.this, AboutUsActivity.class));
                 return true;
             }
         });
