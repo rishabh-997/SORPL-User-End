@@ -18,7 +18,7 @@ public class CartContract
 
         void getCart(String mobile, String company);
 
-        void deleteCart(String mobile, String pid, int pos);
+        void deleteCart(String pid, int pos);
 
         void send(String accessToken);
     }

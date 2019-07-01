@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/history_bar"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/history_name"
+        android:layout_marginBottom="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Rishabh Agarwal"
+        android:visibility="gone"
+        android:gravity="center"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/history_recycler">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

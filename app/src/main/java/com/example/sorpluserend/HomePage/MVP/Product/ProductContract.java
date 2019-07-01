@@ -4,6 +4,7 @@ import com.example.sorpluserend.HomePage.Model.Comapny_response;
 import com.example.sorpluserend.HomePage.Model.Product_Response;
 import com.example.sorpluserend.HomePage.Model.SpecResponse;
 import com.example.sorpluserend.HomePage.Model.SubCat_response;
+import com.example.sorpluserend.HomePage.Model.UnitResponse;
 
 public class ProductContract
 {
@@ -21,6 +22,8 @@ public class ProductContract
         void showSpecs(SpecResponse body);
 
         void updateMyCart(String successfully_added_to_cart);
+
+        void setList(UnitResponse body);
     }
     interface presenter
     {
@@ -28,6 +31,8 @@ public class ProductContract
         void getSubCategory(String company);
         void getList(String subcat,String company);
         void getSpecs(String name);
-        void addCart(String pid,String mobile);
+        void addCart(String pid,String mobile,String size, String unit);
+
+        void getUnit();
     }
 }

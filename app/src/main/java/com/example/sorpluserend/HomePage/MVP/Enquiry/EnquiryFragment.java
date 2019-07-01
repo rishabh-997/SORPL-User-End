@@ -1,8 +1,10 @@
 package com.example.sorpluserend.HomePage.MVP.Enquiry;
 
 
+import android.content.Intent;
 import android.media.midi.MidiOutputPort;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +13,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.sorpluserend.ContactUs.MVP.ContactActivity;
+import com.example.sorpluserend.LogIn.MVP.LogInActivity;
 import com.example.sorpluserend.R;
+import com.example.sorpluserend.SplashActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -19,6 +24,7 @@ import butterknife.ButterKnife;
 public class EnquiryFragment extends Fragment implements EnquiryContract.view
 {
 
+    android.os.Handler Handler = new Handler();
     EnquiryContract.presenter presenter;
 
     @BindView(R.id.enquiryname)
@@ -99,7 +105,28 @@ public class EnquiryFragment extends Fragment implements EnquiryContract.view
     }
 
     @Override
-    public void toast(String message) {
+    public void toast(String message)
+    {
         Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void sent(final String msg) {
+        Toast.makeText(getContext(), "Your Enquiry has been sent. You can Contact us to know the status of your Enquiry", Toast.LENGTH_LONG).show();
+
+        Handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                name.setText("");
+                mobile.setText("");
+                cppany.setText("");
+                email.setText("");
+                message.setText("");
+
+                Intent intent=new Intent(getContext(), ContactActivity.class);
+                startActivity(intent);
+            }
+        },1000);
     }
 }

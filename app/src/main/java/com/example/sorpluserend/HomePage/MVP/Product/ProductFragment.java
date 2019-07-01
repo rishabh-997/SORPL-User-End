@@ -1,18 +1,28 @@
 package com.example.sorpluserend.HomePage.MVP.Product;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sorpluserend.HomePage.MVP.Cart.CartFragment;
@@ -24,8 +34,13 @@ import com.example.sorpluserend.HomePage.Model.SpecList;
 import com.example.sorpluserend.HomePage.Model.SpecResponse;
 import com.example.sorpluserend.HomePage.Model.SubCat_list;
 import com.example.sorpluserend.HomePage.Model.SubCat_response;
+import com.example.sorpluserend.HomePage.Model.UnitList;
+import com.example.sorpluserend.HomePage.Model.UnitResponse;
 import com.example.sorpluserend.R;
 import com.example.sorpluserend.Utilities.SharedPref;
+import com.squareup.picasso.Picasso;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,12 +64,41 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
     @BindView(R.id.prodlist_recycler_view)
     RecyclerView recyclerView;
 
+    @BindView(R.id.cart_name)
+    TextView cart_name;
+    @BindView(R.id.cart_id)
+    TextView cart_id;
+    @BindView(R.id.cart_image)
+    ImageView cart_image;
+    @BindView(R.id.cart_cross)
+    ImageView cart_cross;
+    @BindView(R.id.cart_description)
+    TextView cart_desciption;
+    @BindView(R.id.cart_price)
+    EditText cart_price;
+    @BindView(R.id.cart_size)
+    Spinner cart_size;
+    @BindView(R.id.cart_increase_quantity)
+    TextView cart_increase;
+    @BindView(R.id.cart_decrease_quantity)
+    TextView cart_decrease;
+    @BindView(R.id.cart_item_quantity)
+    EditText cart_quantity;
+    @BindView(R.id.cart_submit)
+    Button cart_submit;
+    @BindView(R.id.bottom_sheet_add_to_cart)
+    RelativeLayout bottom_sheet;
+    BottomSheetBehavior sheetBehavior;
+
+    List<UnitList> unitList=new ArrayList<>();
     List<Comapany_list> comapany_list=new ArrayList<>();
     List<SubCat_list> subcat_list=new ArrayList<>();
     List<ProductList> list=new ArrayList<>();
     List<SpecList> specifications=new ArrayList<>();
 
     String CompanyNameFull="",CompanyNameShort="",SubCategory="";
+    boolean isSheetClosed = true;
+    String cost,size, unit;
 
     public ProductFragment()
     {
@@ -72,7 +116,49 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+
+        presenter.getUnit();
         presenter.getCompany();
+        sheetBehavior=BottomSheetBehavior.from(bottom_sheet);
+        sheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+            @Override
+            public void onStateChanged(@NonNull View bottomSheet, int newState) {
+                switch (newState) {
+                    case BottomSheetBehavior.STATE_HIDDEN:
+                        break;
+                    case BottomSheetBehavior.STATE_EXPANDED: {
+                    }
+                    break;
+                    case BottomSheetBehavior.STATE_COLLAPSED: {
+                        break;
+                    }
+                    case BottomSheetBehavior.STATE_DRAGGING: {
+                        if (!isSheetClosed)
+                            sheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                        break;
+                    }
+                    case BottomSheetBehavior.STATE_SETTLING: {
+                        if (!isSheetClosed)
+                            sheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                        break;
+                    }
+
+                }
+            }
+
+            @Override
+            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+
+            }
+        });
+
+        cart_cross.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isSheetClosed=true;
+                sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            }
+        });
 
         return view;
     }
@@ -82,6 +168,11 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
         progressBar.setVisibility(View.GONE);
         Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
     }
+    @Override
+    public void setList(UnitResponse body) {
+        unitList=body.getPUnitList();
+    }
+
 
     @Override
     public void showCompanies(Comapny_response body) {
@@ -161,12 +252,20 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
     public void showSpecs(SpecResponse body) {
         progressBar.setVisibility(View.GONE);
         specifications=body.getSpecList();
+
         String nospecs="No Specification details";
         String indent= "                 ";
         String message="";
         for(int i=0;i<specifications.size();i++)
         {
-            message=message+specifications.get(i).getHeading()+" - "+specifications.get(i).getValue()+"\n";
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                message=message + Html.fromHtml("<b>"+specifications.get(i).getHeading()+"</b>",Html.FROM_HTML_MODE_LEGACY);
+            }
+            else{
+                message=message + Html.fromHtml("<b>"+specifications.get(i).getHeading()+"</b>");
+            }
+
+            message=message+"\n"+specifications.get(i).getValue()+"\n\n";
         }
 
         if(specifications.size()==0)
@@ -175,14 +274,17 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
         AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
         builder.setCancelable(true);
         builder.setTitle("Specifications");
-        builder.setMessage(message);
+        builder.setMessage(message.trim());
         builder.show();
     }
+
+
 
     @Override
     public void updateMyCart(String successfully_added_to_cart)
     {
         progressBar.setVisibility(View.GONE);
+        cart_quantity.setText("");
         Toast.makeText(getContext(), "Added Successfully to Cart", Toast.LENGTH_SHORT).show();
         listener.UPdateCart();
     }
@@ -209,26 +311,88 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
     @Override
     public void onProductClick(final int position)
     {
-        final AlertDialog alertDialog=new AlertDialog.Builder(getContext()).create();
-        alertDialog.setMessage("Add Product To Cart");
-        alertDialog.setTitle("Are You Sure ?");
-        alertDialog.setCancelable(false);
+        String[] unitlistfinal=new String[unitList.size()];
+        for(int i=0;i<unitList.size();i++)
+            unitlistfinal[i]=unitList.get(i).getUnit();
 
-        alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, unitlistfinal);
+        cart_size.setAdapter(adapter);
+        cart_size.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                alertDialog.dismiss();
-                progressBar.setVisibility(View.VISIBLE);
-                presenter.addCart(list.get(position).getId(),sharedPref.getMobile());
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
-        alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {
+
+
+        ProductList productList=list.get(position);
+        cart_name.setText(productList.getName());
+        cart_id.setText(productList.getId());
+        cart_desciption.setText(productList.getDescription());
+        Picasso.get().load(productList.getImage_url()).into(cart_image);
+
+        isSheetClosed = false;
+        sheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+
+        unit =cart_quantity.getText().toString();
+
+        cart_decrease.setVisibility(View.GONE);
+        cart_increase.setVisibility(View.GONE);
+
+        cart_increase.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                alertDialog.dismiss();
+            public void onClick(View v) {
+                unit =""+(Integer.valueOf(unit)+1);
+                cart_quantity.setText(unit);
             }
         });
-        alertDialog.show();
+        cart_decrease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                unit =""+(Integer.valueOf(unit)-1);
+                cart_quantity.setText(unit);
+            }
+        });
+
+        cart_submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                if(cart_quantity.getText().toString().isEmpty())
+                    Toast.makeText(getContext(), "Please Enter The Quantity", Toast.LENGTH_SHORT).show();
+
+                else {
+                    addinCart(position);
+                    if(!isSheetClosed)
+                    {
+                        isSheetClosed=true;
+                        sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                    }
+                }
+            }
+        });
+        cart_cross.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!isSheetClosed)
+                {
+                    isSheetClosed=true;
+                    sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                }
+            }
+        });
+    }
+
+    private void addinCart(int position)
+    {
+        size=cart_size.getSelectedItem().toString();
+        unit=cart_quantity.getText().toString();
+        progressBar.setVisibility(View.VISIBLE);
+        presenter.addCart(list.get(position).getId(),sharedPref.getMobile(),size,unit);
     }
 
     /**

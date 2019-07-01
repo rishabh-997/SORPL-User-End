@@ -21,11 +21,13 @@ public class CartList {
     @SerializedName("sub_category")
     String subcat;
 
-    public CartList(String name, String description, String id, String image_url, String sub_category, String size, String unit, String cost, String total_cost, String cgst, String sgst, String total_cost_tax) {
-        this.name = name;
-        this.description = description;
-        this.id = id;
-        this.image_url = image_url;
+    @SerializedName("cart_id")
+    String cartid;
+
+
+
+    public String getCartid() {
+        return cartid;
     }
 
     public String getSubcat() {

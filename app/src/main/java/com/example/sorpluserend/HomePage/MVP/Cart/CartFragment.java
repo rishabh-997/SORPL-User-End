@@ -97,7 +97,7 @@ public class CartFragment extends Fragment implements CartContract.view,CartAdap
             public void onClick(DialogInterface dialog, int which) {
                 alertDialog.dismiss();
                 progressBar.setVisibility(View.VISIBLE);
-                presenter.deleteCart(sharedPref.getMobile(),list.get(pos).getId(),pos);
+                presenter.deleteCart(list.get(pos).getCartid(),pos);
             }
         });
         alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {

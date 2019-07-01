@@ -26,7 +26,7 @@ public class EnquiryPresenter implements EnquiryContract.presenter
                 {
                     if(response.body().getMessage().equals("Enquiry Sent"))
                     {
-                        mvpview.toast(response.body().getMessage());
+                        mvpview.sent(response.body().getMessage());
                     }
                     else
                     {

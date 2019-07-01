@@ -1,5 +1,7 @@
 package com.example.sorpluserend.Utilities;
 import com.example.sorpluserend.ContactUs.Model.ContactResponse;
+import com.example.sorpluserend.History.Model.HistoryDetailResponse;
+import com.example.sorpluserend.History.Model.HistoryResponse;
 import com.example.sorpluserend.HomePage.Model.CartResponse;
 import com.example.sorpluserend.HomePage.Model.CartResponse_CUD;
 import com.example.sorpluserend.HomePage.Model.Comapny_response;
@@ -8,6 +10,7 @@ import com.example.sorpluserend.HomePage.Model.MarketResponse;
 import com.example.sorpluserend.HomePage.Model.Product_Response;
 import com.example.sorpluserend.HomePage.Model.SpecResponse;
 import com.example.sorpluserend.HomePage.Model.SubCat_response;
+import com.example.sorpluserend.HomePage.Model.UnitResponse;
 import com.example.sorpluserend.LogIn.Model.LogInResponse;
 import com.example.sorpluserend.OTP.Model.OTPResponse;
 import com.example.sorpluserend.SignUp.Model.ResponseBody;
@@ -74,7 +77,9 @@ public interface ClientAPI
     @FormUrlEncoded
     Call<ResponseBody> addCart(
             @Field("MobileNumber") String mobile,
-            @Field("PID") String pid
+            @Field("PID") String pid,
+            @Field("Size") String size,
+            @Field("Unit") String unit
     );
 
     @POST("CartDetails/")
@@ -86,8 +91,7 @@ public interface ClientAPI
     @POST("DeleteCart/")
     @FormUrlEncoded
     Call<CartResponse_CUD> deleteProduct(
-            @Field("MobileNumber") String mobile,
-            @Field("PID") String productid
+            @Field("ID") String id
     );
 
     @POST("MarketDetails/")
@@ -116,5 +120,24 @@ public interface ClientAPI
             @Field("EmailId") String email,
             @Field("Company") String company,
             @Field("Message") String message
+    );
+
+    @POST("GetOrderHistory/")
+    @FormUrlEncoded
+    Call<HistoryResponse> getOrderHistory(
+            @Field("MobileNumber") String mob,
+            @Field("Contact_Type") String type,
+            @Field("Company") String company
+    );
+
+    @POST("GetOrderDetailsHistory/")
+    @FormUrlEncoded
+    Call<HistoryDetailResponse> getOrderDetailsHistory(
+            @Field("OrderId") String id
+    );
+    @POST("GetUnitData/")
+    @FormUrlEncoded
+    Call<UnitResponse> getUnits(
+            @Field("mob") String mob
     );
 }

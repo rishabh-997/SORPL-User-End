@@ -49,6 +49,8 @@
             android:label="FAQ's"/>
         <activity android:name=".AboutUs.AboutUsActivity"
             android:label="About Us"/>
+        <activity android:name=".History.MVP.HistoryActivity"
+            android:label="History"/>
     </application>
 
 </manifest>

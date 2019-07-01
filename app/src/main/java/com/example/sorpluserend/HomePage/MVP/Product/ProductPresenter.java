@@ -4,6 +4,7 @@ import com.example.sorpluserend.HomePage.Model.Product_Response;
 import com.example.sorpluserend.HomePage.Model.SpecResponse;
 import com.example.sorpluserend.HomePage.Model.SubCat_response;
 
+import com.example.sorpluserend.HomePage.Model.UnitResponse;
 import com.example.sorpluserend.SignUp.Model.ResponseBody;
 import com.example.sorpluserend.Utilities.ClientAPI;
 import com.example.sorpluserend.Utilities.Utils;
@@ -121,8 +122,8 @@ public class ProductPresenter implements ProductContract.presenter
     }
 
     @Override
-    public void addCart(String pid, String mobile) {
-        clientAPI.addCart(mobile,pid).enqueue(new Callback<ResponseBody>() {
+    public void addCart(String pid, String mobile,String size, String unit) {
+        clientAPI.addCart(mobile,pid,size,unit).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if(response.isSuccessful())
@@ -138,6 +139,21 @@ public class ProductPresenter implements ProductContract.presenter
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
+                mvpview.showtaost(t.getMessage());
+            }
+        });
+    }
+
+    @Override
+    public void getUnit() {
+        clientAPI.getUnits("").enqueue(new Callback<UnitResponse>() {
+            @Override
+            public void onResponse(Call<UnitResponse> call, Response<UnitResponse> response) {
+                mvpview.setList(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<UnitResponse> call, Throwable t) {
                 mvpview.showtaost(t.getMessage());
             }
         });

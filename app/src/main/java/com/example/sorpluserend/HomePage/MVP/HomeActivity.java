@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.example.sorpluserend.AboutUs.AboutUsActivity;
 import com.example.sorpluserend.ContactUs.MVP.ContactActivity;
 import com.example.sorpluserend.FAQ.MVP.FAQActivity;
+import com.example.sorpluserend.History.MVP.HistoryActivity;
 import com.example.sorpluserend.HomePage.MVP.Cart.CartFragment;
 import com.example.sorpluserend.HomePage.MVP.Enquiry.EnquiryFragment;
 import com.example.sorpluserend.HomePage.MVP.Market.MarketFragment;
@@ -93,6 +94,8 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
                     startActivity(new Intent(HomeActivity.this, FAQActivity.class));
                 else if(id==R.id.navigation_about)
                     startActivity(new Intent(HomeActivity.this, AboutUsActivity.class));
+                else if(id==R.id.navigation_history)
+                    startActivity(new Intent(HomeActivity.this, HistoryActivity.class));
                 return true;
             }
         });

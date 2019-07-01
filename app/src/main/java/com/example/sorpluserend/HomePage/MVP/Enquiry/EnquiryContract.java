@@ -9,6 +9,7 @@ public class EnquiryContract
         void toast(String message);
 
 
+        void sent(String message);
     }
     interface presenter
     {
