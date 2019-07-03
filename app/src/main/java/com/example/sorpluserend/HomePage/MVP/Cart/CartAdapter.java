@@ -1,5 +1,6 @@
 package com.example.sorpluserend.HomePage.MVP.Cart;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
@@ -36,6 +37,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>
         return new ViewHolder(view,onNoteClickListener);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull CartAdapter.ViewHolder viewHolder, int i)
     {
@@ -51,6 +53,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>
         CartList cartList=list.get(i);
         viewHolder.name.setText(cartList.getName());
         viewHolder.sub.setText(cartList.getSubcat());
+        viewHolder.size.setText(cartList.getUnit()+" units of "+cartList.getSize());
         Picasso.get().load(cartList.getImage_url()).into(viewHolder.image);
     }
 
@@ -63,7 +66,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>
     {
         RelativeLayout linearLayout;
         ImageView image,dustbin;
-        TextView name,sub;
+        TextView name,sub,size;
         onNoteClickListener listener;
 
         public ViewHolder(@NonNull View itemView,onNoteClickListener onNoteClickListener) {
@@ -73,6 +76,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>
             image=itemView.findViewById(R.id.cart_image);
             dustbin=itemView.findViewById(R.id.cart_delete);
             sub=itemView.findViewById(R.id.cart_subcat);
+            size=itemView.findViewById(R.id.cart_size_unit);
             linearLayout=itemView.findViewById(R.id.cart_layout);
 
             dustbin.setOnClickListener(new View.OnClickListener() {

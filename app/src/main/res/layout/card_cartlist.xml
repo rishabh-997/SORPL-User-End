@@ -42,6 +42,19 @@
             android:paddingTop="3dp"
             android:id="@+id/cart_subcat"/>
 
+        <TextView
+            android:id="@+id/cart_size_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Size and unit"
+            android:layout_toRightOf="@id/cart_image"
+            android:layout_below="@+id/cart_subcat"
+            android:textSize="10sp"
+            android:textColor="@color/colorPrimary"
+            android:textAllCaps="true"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"/>
+
         <ImageView
             android:id="@+id/cart_delete"
             android:layout_width="25dp"

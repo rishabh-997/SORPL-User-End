@@ -3,15 +3,50 @@ package com.example.sorpluserend.AboutUs;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.sorpluserend.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import ss.com.bannerslider.Slider;
+
 public class AboutUsActivity  extends AppCompatActivity
 {
+    @BindView(R.id.toolbar_back)
+    ImageView imageView;
+    @BindView(R.id.toolbar_text)
+    TextView heading;
+    @BindView(R.id.banner_slider1)
+    Slider banner_slider;
+
+    MainSliderAdapter MainSliderAdapter = new MainSliderAdapter();
+    PicassoImageLoadingService PicassoImageLoadingService =new PicassoImageLoadingService(AboutUsActivity.this);
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aboutus);
+        ButterKnife.bind(this);
+        getSupportActionBar().hide();
+
+        Slider.init(PicassoImageLoadingService);
+        banner_slider.setAdapter(MainSliderAdapter);
+
+        heading.setText("About");
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                onBackPressed();
+            }
+        });
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
 

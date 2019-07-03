@@ -55,13 +55,7 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.ViewHolder
         viewHolder.usd.setText(marketList.getUsd()+" USD");
         viewHolder.inr.setText(marketList.getInr()+" INR");
         viewHolder.desc.setText(marketList.getDesc());
-
-        if(i%3==0)
-            viewHolder.image.setImageResource(R.drawable.b);
-        else if(i%3==1)
-            viewHolder.image.setImageResource(R.drawable.chemistry);
-        else
-            viewHolder.image.setImageResource(R.drawable.flask);
+        Picasso.get().load(marketList.getImage_url()).into(viewHolder.image);
 
         if(marketList.getTag().equals("Increase"))
         {

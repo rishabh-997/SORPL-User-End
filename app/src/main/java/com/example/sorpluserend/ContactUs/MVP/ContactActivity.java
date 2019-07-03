@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,12 +33,27 @@ public class ContactActivity extends AppCompatActivity implements ContactContrac
     Button mobile_button;
     @BindView(R.id.contact_phone_button)
     Button phone_button;
+    @BindView(R.id.toolbar_back)
+    ImageView imageView;
+    @BindView(R.id.toolbar_text)
+    TextView heading;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
         ButterKnife.bind(this);
+
+        getSupportActionBar().hide();
+
+        heading.setText("Contact Us");
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                onBackPressed();
+            }
+        });
         presenter=new ContactPresenter(this);
 
         presenter.getContact();
@@ -99,5 +115,9 @@ public class ContactActivity extends AppCompatActivity implements ContactContrac
         email_text.setText(email);
         mobile_text.setText(mobile);
         phone_text.setText(phone);
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

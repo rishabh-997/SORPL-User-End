@@ -16,6 +16,12 @@ public class MarketList
     String percent;
     @SerializedName("Description")
     String desc;
+    @SerializedName("images")
+    String image_url;
+
+    public String getImage_url() {
+        return image_url;
+    }
 
     public String getDesc() {
         return desc;

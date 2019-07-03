@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,6 +38,10 @@ public class HistoryActivity extends AppCompatActivity implements HistoryContrac
     RecyclerView recyclerView;
     @BindView(R.id.history_bar)
     ProgressBar progressBar;
+    @BindView(R.id.toolbar_back)
+    ImageView imageView;
+    @BindView(R.id.toolbar_text)
+    TextView heading;
 
     List<HistoryList> list=new ArrayList<>();
     HistoryAdapter adapter;
@@ -47,6 +52,17 @@ public class HistoryActivity extends AppCompatActivity implements HistoryContrac
         setContentView(R.layout.activity_history);
         ButterKnife.bind(this);
         sharedPref=new SharedPref(this);
+
+        getSupportActionBar().hide();
+
+        heading.setText("History");
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                onBackPressed();
+            }
+        });
 
         presenter=new HistoryPresenter(this);
         presenter.getHistory(sharedPref.getMobile(),"Client", "All");
@@ -103,5 +119,10 @@ public class HistoryActivity extends AppCompatActivity implements HistoryContrac
         String comment=list.get(position).getComment();
         progressBar.setVisibility(View.VISIBLE);
         presenter.getDetails(orderid,comment);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

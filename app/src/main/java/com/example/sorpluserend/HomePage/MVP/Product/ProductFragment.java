@@ -98,7 +98,7 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
 
     String CompanyNameFull="",CompanyNameShort="",SubCategory="";
     boolean isSheetClosed = true;
-    String cost,size, unit;
+    String size, unit;
 
     public ProductFragment()
     {

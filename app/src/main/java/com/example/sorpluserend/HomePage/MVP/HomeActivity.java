@@ -11,6 +11,7 @@ import android.support.design.widget.TabItem;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -19,9 +20,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sorpluserend.AboutUs.AboutUsActivity;
+import com.example.sorpluserend.Cart.CartActivity;
 import com.example.sorpluserend.ContactUs.MVP.ContactActivity;
 import com.example.sorpluserend.FAQ.MVP.FAQActivity;
 import com.example.sorpluserend.History.MVP.HistoryActivity;
@@ -34,6 +38,8 @@ import com.example.sorpluserend.R;
 import com.example.sorpluserend.Utilities.MyApplication;
 import com.example.sorpluserend.Utilities.SharedPref;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import timber.log.Timber;
 
 import static com.example.sorpluserend.Utilities.MyApplication.getContext;
@@ -44,6 +50,14 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
     DrawerLayout dl;
     ActionBarDrawerToggle abdt;
     SharedPref sharedPref;
+
+    @BindView(R.id.toolbar_text)
+    TextView heading;
+    @BindView(R.id.toolbar_cart)
+    ImageView cart;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+
 
     final Fragment fragment1 = new ProductFragment();
     final Fragment fragment2 = new MarketFragment();
@@ -56,17 +70,22 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        ButterKnife.bind(this);
+
+        setSupportActionBar(toolbar);
+        heading.setText("Home");
+
         sharedPref=new SharedPref(this);
+        ButterKnife.bind(this);
         presenter=new HomePresenter(this);
 
-        Log.i("MY FCM",MyApplication.getFcm());
+        Timber.i(MyApplication.getFcm());
 
         dl=findViewById(R.id.drawer_layout);
-        abdt=new ActionBarDrawerToggle(this,dl,R.string.Open,R.string.Close);
+        abdt=new ActionBarDrawerToggle(this,dl,toolbar,R.string.Open,R.string.Close);
         abdt.setDrawerIndicatorEnabled(true);
         dl.addDrawerListener(abdt);
         abdt.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         NavigationView navview=findViewById(R.id.nav_view);
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
@@ -99,6 +118,18 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
                 return true;
             }
         });
+
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToCart();
+            }
+        });
+    }
+
+    private void goToCart()
+    {
+        startActivity(new Intent(this, CartActivity.class));
     }
 
     private void logout()

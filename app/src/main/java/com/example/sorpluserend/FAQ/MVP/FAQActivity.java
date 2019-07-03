@@ -5,6 +5,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sorpluserend.FAQ.Model.FAQModel;
@@ -25,6 +28,10 @@ public class FAQActivity extends AppCompatActivity
 {
     @BindView(R.id.faq_recycler)
     RecyclerView recyclerView;
+    @BindView(R.id.toolbar_back)
+    ImageView imageView;
+    @BindView(R.id.toolbar_text)
+    TextView heading;
 
     FAQAdapter adapter;
     ArrayList<FAQModel> arrayList=new ArrayList<>();
@@ -34,7 +41,16 @@ public class FAQActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
         ButterKnife.bind(this);
+        getSupportActionBar().hide();
 
+        heading.setText("FAQ's");
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                onBackPressed();
+            }
+        });
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -77,5 +93,10 @@ public class FAQActivity extends AppCompatActivity
 
         adapter = new FAQAdapter(arrayList, this);
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

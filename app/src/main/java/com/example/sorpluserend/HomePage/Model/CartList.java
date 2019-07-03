@@ -24,7 +24,18 @@ public class CartList {
     @SerializedName("cart_id")
     String cartid;
 
+    @SerializedName("Size")
+    String size;
+    @SerializedName("Unit")
+    String unit;
 
+    public String getSize() {
+        return size;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
 
     public String getCartid() {
         return cartid;

@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <ImageView
+    <include layout="@layout/toolbar"/>
+
+    <ss.com.bannerslider.Slider
+        android:id="@+id/banner_slider1"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_margin="12dp"
-        android:src="@mipmap/about"
-        android:scaleType="centerCrop"/>
+        app:slider_interval="3000"
+        app:slider_loopSlides="true"
+        tools:layout_editor_absoluteY="1dp" />
 
     <ScrollView
         android:layout_width="match_parent"

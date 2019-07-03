@@ -77,7 +77,7 @@ public class CartFragment extends Fragment implements CartContract.view,CartAdap
     private void sendRequest()
     {
         if(list.size()==0)
-            Toast.makeText(getContext(), "Cart is Empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "CartActivity is Empty", Toast.LENGTH_SHORT).show();
         else {
             progressBar.setVisibility(View.VISIBLE);
             presenter.send(sharedPref.getAccessToken());
@@ -88,7 +88,7 @@ public class CartFragment extends Fragment implements CartContract.view,CartAdap
     public void clickdelete(final int pos) {
 
         final AlertDialog alertDialog=new AlertDialog.Builder(getContext()).create();
-        alertDialog.setMessage("Add Product To Cart");
+        alertDialog.setMessage("Add Product To CartActivity");
         alertDialog.setTitle("Are You Sure ?");
         alertDialog.setCancelable(false);
 

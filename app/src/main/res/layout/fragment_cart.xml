@@ -7,7 +7,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomePage.MVP.Cart.CartFragment">
 
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/t"/>
+
     <ProgressBar
+        android:layout_below="@+id/t"
         android:id="@+id/asli_cart_bar"
         style="@android:style/Widget.Holo.ProgressBar.Horizontal"
         android:layout_width="match_parent"
@@ -18,40 +23,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <RelativeLayout
-        android:id="@+id/layout"
-        android:layout_below="@+id/asli_cart_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@android:color/white">
-
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:src="@drawable/ic_shopping_cart_black_24dp"/>
-        <TextView
-            android:id="@+id/heading"
-            android:layout_toRightOf="@+id/image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="YOUR CART"
-            android:textStyle="bold"
-            android:textSize="17sp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="16dp"/>
-
-    </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/cart_recycler"
-        android:layout_below="@+id/layout"
+        android:layout_below="@+id/asli_cart_bar"
         android:layout_above="@+id/cart_send">
     </android.support.v7.widget.RecyclerView>
 
@@ -59,7 +36,7 @@
         android:id="@+id/cart_send"
         android:layout_width="match_parent"
         android:layout_margin="6dp"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:text="Send Order Enquiry"
         android:textScaleX="1.2"
         android:layout_alignParentBottom="true"

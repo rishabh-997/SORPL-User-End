@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include layout="@layout/toolbar"/>
+
     <ProgressBar
         android:id="@+id/history_bar"
         style="@android:style/Widget.Holo.ProgressBar.Horizontal"
