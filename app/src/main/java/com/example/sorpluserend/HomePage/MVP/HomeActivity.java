@@ -34,6 +34,7 @@ import com.example.sorpluserend.HomePage.MVP.Enquiry.EnquiryFragment;
 import com.example.sorpluserend.HomePage.MVP.Market.MarketFragment;
 import com.example.sorpluserend.HomePage.MVP.Product.ProductFragment;
 import com.example.sorpluserend.LogIn.MVP.LogInActivity;
+import com.example.sorpluserend.MyDetails.MVP.DetailActivity;
 import com.example.sorpluserend.R;
 import com.example.sorpluserend.Utilities.MyApplication;
 import com.example.sorpluserend.Utilities.SharedPref;
@@ -106,7 +107,7 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
                     logout();
                 }
                 else if(id==R.id.navigation_profile)
-                    Toast.makeText(HomeActivity.this, "Mobile is "+sharedPref.getMobile(), Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(HomeActivity.this, DetailActivity.class));
                 else if(id==R.id.navigation_contactus)
                     startActivity(new Intent(HomeActivity.this, ContactActivity.class));
                 else if(id==R.id.navigation_faq)

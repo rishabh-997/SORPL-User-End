@@ -65,6 +65,9 @@
             android:theme="@style/AppTheme"/>
         <activity android:name=".Cart.CartActivity"
             android:theme="@style/AppTheme"/>
+        <activity android:name=".MyDetails.MVP.DetailActivity"
+            android:theme="@style/AppTheme"
+            android:label="Detail"/>
     </application>
 
 </manifest>

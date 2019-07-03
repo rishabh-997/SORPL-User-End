@@ -12,6 +12,7 @@ import com.example.sorpluserend.HomePage.Model.SpecResponse;
 import com.example.sorpluserend.HomePage.Model.SubCat_response;
 import com.example.sorpluserend.HomePage.Model.UnitResponse;
 import com.example.sorpluserend.LogIn.Model.LogInResponse;
+import com.example.sorpluserend.MyDetails.Model.ResponseClient;
 import com.example.sorpluserend.OTP.Model.OTPResponse;
 import com.example.sorpluserend.SignUp.Model.ResponseBody;
 
@@ -23,6 +24,13 @@ import retrofit2.http.POST;
 
 public interface ClientAPI
 {
+
+    @POST("Search/")
+    @FormUrlEncoded
+    Call<ResponseClient> search(
+            @Field("RegType") String regtype,
+            @Field("query") String query
+    );
 
     @POST("login/")
     @FormUrlEncoded
