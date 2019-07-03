@@ -3,6 +3,7 @@ package com.example.sorpluserend.HomePage.MVP.Market;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -40,6 +41,8 @@ public class MarketFragment extends Fragment implements MarketContract.view
     RecyclerView recyclerView;
     @BindView(R.id.market_bar)
     ProgressBar progressBar;
+    @BindView(R.id.swiperefresh)
+    SwipeRefreshLayout swipe;
 
 
     public MarketFragment() {
@@ -60,7 +63,21 @@ public class MarketFragment extends Fragment implements MarketContract.view
 
         presenter.getList();
 
+        swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refresh();
+                swipe.setRefreshing(false);
+            }
+        });
+
         return view;
+    }
+
+    private void refresh()
+    {
+        progressBar.setVisibility(View.VISIBLE);
+        presenter.getList();
     }
 
     @Override

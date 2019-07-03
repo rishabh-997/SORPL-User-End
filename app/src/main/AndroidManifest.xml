@@ -68,6 +68,9 @@
         <activity android:name=".MyDetails.MVP.DetailActivity"
             android:theme="@style/AppTheme"
             android:label="Detail"/>
+        <activity android:name=".AboutUsOnSignUp.AboutUs2Activity"
+            android:label="About Us"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@ package com.example.sorpluserend.History.MVP;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -42,6 +43,8 @@ public class HistoryActivity extends AppCompatActivity implements HistoryContrac
     ImageView imageView;
     @BindView(R.id.toolbar_text)
     TextView heading;
+    @BindView(R.id.swiperefresh)
+    SwipeRefreshLayout swipe;
 
     List<HistoryList> list=new ArrayList<>();
     HistoryAdapter adapter;
@@ -65,6 +68,20 @@ public class HistoryActivity extends AppCompatActivity implements HistoryContrac
         });
 
         presenter=new HistoryPresenter(this);
+        presenter.getHistory(sharedPref.getMobile(),"Client", "All");
+
+        swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refresh();
+                swipe.setRefreshing(false);
+            }
+        });
+    }
+
+    private void refresh()
+    {
+        progressBar.setVisibility(View.VISIBLE);
         presenter.getHistory(sharedPref.getMobile(),"Client", "All");
     }
 

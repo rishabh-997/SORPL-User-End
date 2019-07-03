@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -45,6 +46,9 @@ public class CartActivity extends AppCompatActivity implements CartContract_real
     ProgressBar progressBar;
     @BindView(R.id.cart_send)
     TextView send;
+    @BindView(R.id.swiperefresh)
+    SwipeRefreshLayout swipe;
+
 
     CartAdapter_real adapter;
     List<CartList> list=new ArrayList<>();
@@ -81,6 +85,19 @@ public class CartActivity extends AppCompatActivity implements CartContract_real
             }
         });
 
+        swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refresh();
+                swipe.setRefreshing(false);
+            }
+        });
+    }
+
+    private void refresh()
+    {
+        progressBar.setVisibility(View.VISIBLE);
+        presenter.getCart(sharedPref.getMobile(),"All");
     }
 
     private void sendRequest()

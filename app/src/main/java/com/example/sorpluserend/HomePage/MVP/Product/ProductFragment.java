@@ -1,6 +1,7 @@
 package com.example.sorpluserend.HomePage.MVP.Product;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Rect;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,6 +14,7 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -271,11 +273,17 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
         if(specifications.size()==0)
             message=nospecs;
 
+        Rect displayRectangle = new Rect();
+        Window window= getActivity().getWindow();
+        window.getDecorView().getWindowVisibleDisplayFrame(displayRectangle);
+        int width= (int) (displayRectangle.width()*0.93f);
+        int heiht= (int) (displayRectangle.height()*0.60f);
+
         AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
         builder.setCancelable(true);
         builder.setTitle("Specifications");
         builder.setMessage(message.trim());
-        builder.show();
+        builder.show().getWindow().setLayout(width,heiht);
     }
 
 

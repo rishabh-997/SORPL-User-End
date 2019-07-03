@@ -74,7 +74,7 @@ public class DetailActivity extends AppCompatActivity implements DetailContract.
         presenter=new DetailPreseenter(this);
         getSupportActionBar().hide();
 
-        heading.setText("FAQ's");
+        heading.setText("My Details");
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

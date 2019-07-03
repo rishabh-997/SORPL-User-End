@@ -211,6 +211,7 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 alertDialog.dismiss();
+                finish();
                 HomeActivity.super.onBackPressed();
             }
         });

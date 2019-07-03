@@ -35,7 +35,7 @@ public class AboutUsActivity  extends AppCompatActivity
         Slider.init(PicassoImageLoadingService);
         banner_slider.setAdapter(MainSliderAdapter);
 
-        heading.setText("About");
+        heading.setText("About Us");
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

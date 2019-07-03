@@ -17,7 +17,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="60dp"
         android:layout_marginBottom="40dp"
-        android:src="@mipmap/barrel" />
+        android:src="@drawable/sorpl" />
 
     <TextView
         android:layout_width="wrap_content"

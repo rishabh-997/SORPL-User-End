@@ -7,9 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sorpluserend.AboutUsOnSignUp.AboutUs2Activity;
 import com.example.sorpluserend.LogIn.MVP.LogInActivity;
 import com.example.sorpluserend.R;
 
@@ -33,6 +35,8 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
     Button _signupButton;
     @BindView(R.id.link_login)
     TextView _loginLink;
+    @BindView(R.id.signup_bar)
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -84,6 +88,7 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
         }
         else
         {
+            progressBar.setVisibility(View.VISIBLE);
             presenter.createUser(_nameText.getText().toString(),_mobileText.getText().toString(),_emailText.getText().toString(),_addressText.getText().toString(),"client");
         }
     }
@@ -102,17 +107,18 @@ public class SignUpActivity extends AppCompatActivity implements SignUpContract.
 
     @Override
     public void toast(String message) {
+        progressBar.setVisibility(View.GONE);
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void success()
     {
-        Toast.makeText(this, "SuccessFully Created Account !\nPlease LogIn to continue", Toast.LENGTH_LONG).show();
-
-        Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
+        Toast.makeText(this, "SuccessFully Created Account !", Toast.LENGTH_LONG).show();
+        progressBar.setVisibility(View.GONE);
+        Intent intent = new Intent(getApplicationContext(), AboutUs2Activity.class);
         startActivityForResult(intent, REQUEST_SIGNUP);
         finish();
-        overridePendingTransition(R.anim.push_left_out, R.anim.push_left_in);
+        overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
     }
 }

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ss.com.bannerslider.Slider
+        android:id="@+id/banner_slider1"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        app:slider_interval="3000"
+        app:slider_loopSlides="true"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <ScrollView
+        android:layout_below="@+id/banner_slider1"
+        android:layout_above="@+id/proceed_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Girdhari Chemicals and Resins Pvt.Ltd is our mother concerned company which has been catering the protective coating industry and printing ink industry now for more than 2 decades."
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Subham Oils and Resins Pvt. Ltd is a name of trust, expertise and quality in the field of manufacturing and exporting of Alkyd and Synthetic Resin, both in India and Overseas."
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="With an ISO Certification of ISO 9001:2015 and the vision of moulding the concept of Exponential growth around Quality products and customer satisfaction the company has always focused on catering to the needs of our customer and create a hassle free and smooth environment to work in."
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="With a strong team of experts the company has been acing this field and is growing with multiple folds with every passing year."
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The important activities of R and D are in the areas of development of new products and applications, development of formulations using alternative raw materials and improvement in its existing products to suit customer requirements."
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We focus not only on the traditional products like 'Alkyds' but invest considerable financial resources and time on developing resins that are eco-friendly and move along with the world trends."
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We are committed to deliver customers consistent quality products and an assurance of the quality for the entire range of the products."
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This assurance begins from the purchase of the raw materials, its analytical testing and approval before consumption, stringent control of processing parameters, intermediate quality monitoring and approval of the finished products before dispatch."
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="With our main setup in Kolkata we have a head office located in the main city and two manufacturing plants in the industrial belt of the city with a production capacity of almost 50 Metric Tons per day."
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Being in this Industry for the last 2 decades has helped us to use our experience and blend it with the modern amenities, equipments and technology to not only make our product the best in the market but at the same time work on it to make a variety of different products and expertise in that.In the coming years, we are also focusing on expanding our wings further across Asia, Africa, and Middle East and South East Asian countries"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/proceed_button"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:text="Proceed"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textScaleX="1.1"
+        android:background="@drawable/gradbutton"
+        android:layout_margin="3dp"
+        />
+
+</RelativeLayout>
