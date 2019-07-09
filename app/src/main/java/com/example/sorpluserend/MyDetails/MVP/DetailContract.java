@@ -15,5 +15,7 @@ public class DetailContract
     {
 
         void search(String query);
+
+        void update(String name, String mobile, String phone, String email, String pan, String billto, String shipto, String gst, String bankname, String ifsc, String isc, String bankphone, String accno, String msmenumber, String preferred, String regtype);
     }
 }

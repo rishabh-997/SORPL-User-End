@@ -3,13 +3,17 @@
     package="com.example.sorpluserend">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/sorpl"
         android:label="@string/app_name"
         android:roundIcon="@drawable/sorpl"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true">
+
 
         <service
             android:name=".Services.MyFireBaseMessagingService"
@@ -21,10 +25,10 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
-            android:value="@string/default_notification_channel_id" />
+            android:value="@string/default_notification_channel_id"/>
 
         <activity
-            android:name=".SplashActivity"
+            android:name=".Splash.MVP.SplashActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -70,6 +74,15 @@
             android:label="Detail"/>
         <activity android:name=".AboutUsOnSignUp.AboutUs2Activity"
             android:label="About Us"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".CompanyData.MVP.CompanyActivity"
+            android:label="Company Data"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".CompanyData.ViewActivity"
+            android:label="PDF"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".Help.MVP.HelpActivity"
+            android:label="Help"
             android:theme="@style/AppTheme"/>
     </application>
 

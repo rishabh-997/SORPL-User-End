@@ -61,7 +61,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     {
         TextView name,description;
         ImageView imageView;
-        ImageView specs;
+        TextView specs;
         onNoteClickListener listener;
 
         public ViewHolder(@NonNull View itemView,onNoteClickListener onNoteClickListener)

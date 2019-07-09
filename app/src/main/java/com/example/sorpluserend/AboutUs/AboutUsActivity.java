@@ -3,11 +3,13 @@ package com.example.sorpluserend.AboutUs;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sorpluserend.R;
+import com.example.sorpluserend.Utilities.MyApplication;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,6 +45,7 @@ public class AboutUsActivity  extends AppCompatActivity
                 onBackPressed();
             }
         });
+        Log.i("fcm", MyApplication.getFcm());
     }
     @Override
     public void onBackPressed() {

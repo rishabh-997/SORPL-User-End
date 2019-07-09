@@ -122,8 +122,8 @@ public class ProductPresenter implements ProductContract.presenter
     }
 
     @Override
-    public void addCart(String pid, String mobile,String size, String unit) {
-        clientAPI.addCart(mobile,pid,unit,size).enqueue(new Callback<ResponseBody>() {
+    public void addCart(String pid, String mobile,String size, String unit,String nvm) {
+        clientAPI.addCart(mobile,pid,unit,size,nvm).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if(response.isSuccessful())

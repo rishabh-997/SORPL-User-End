@@ -105,6 +105,9 @@ public class LogInActivity extends AppCompatActivity implements LogInContract.vi
     public void OTPPage() {
 
         progressBar.setVisibility(View.GONE);
+
+        Log.i("FCM",MyApplication.getFcm());
+
         Intent intent = new Intent(getApplicationContext(), OTPActivity.class);
         intent.putExtra("Mobile",_emailText.getText().toString());
         startActivityForResult(intent, REQUEST_SIGNUP);

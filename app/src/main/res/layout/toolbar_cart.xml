@@ -20,6 +20,7 @@
             android:paddingTop="2dp"
             android:id="@+id/toolbar_text"
             android:textColor="@android:color/white" />
+
         <ImageView
             android:id="@+id/toolbar_cart"
             android:layout_width="35dp"

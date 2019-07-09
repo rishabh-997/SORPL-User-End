@@ -2,7 +2,6 @@ package com.example.sorpluserend.HomePage.MVP.Enquiry;
 
 
 import android.content.Intent;
-import android.media.midi.MidiOutputPort;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -14,9 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.sorpluserend.ContactUs.MVP.ContactActivity;
-import com.example.sorpluserend.LogIn.MVP.LogInActivity;
 import com.example.sorpluserend.R;
-import com.example.sorpluserend.SplashActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

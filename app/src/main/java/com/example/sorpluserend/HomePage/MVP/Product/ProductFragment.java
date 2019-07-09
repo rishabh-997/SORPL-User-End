@@ -66,10 +66,14 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
     @BindView(R.id.prodlist_recycler_view)
     RecyclerView recyclerView;
 
+    @BindView(R.id.lay4)
+    LinearLayout linearLayout;
     @BindView(R.id.cart_name)
     TextView cart_name;
     @BindView(R.id.cart_id)
     TextView cart_id;
+    @BindView(R.id.cart_nvm)
+    EditText nvm;
     @BindView(R.id.cart_image)
     ImageView cart_image;
     @BindView(R.id.cart_cross)
@@ -293,6 +297,7 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
     {
         progressBar.setVisibility(View.GONE);
         cart_quantity.setText("");
+        nvm.setText("");
         Toast.makeText(getContext(), "Added Successfully to Cart", Toast.LENGTH_SHORT).show();
         listener.UPdateCart();
     }
@@ -305,6 +310,14 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
                 CompanyNameShort = comapany_list.get(i).getCompanyshort();
                 break;
             }
+        }
+        if(CompanyNameShort.equals("BCHEM"))
+        {
+            linearLayout.setVisibility(View.GONE);
+        }
+        else
+        {
+            linearLayout.setVisibility(View.VISIBLE);
         }
         presenter.getSubCategory(CompanyNameShort);
     }
@@ -400,7 +413,8 @@ public class ProductFragment extends Fragment implements ProductContract.view,Pr
         size=cart_size.getSelectedItem().toString();
         unit=cart_quantity.getText().toString();
         progressBar.setVisibility(View.VISIBLE);
-        presenter.addCart(list.get(position).getId(),sharedPref.getMobile(),size,unit);
+        String nvmtext=nvm.getText().toString();
+        presenter.addCart(list.get(position).getId(),sharedPref.getMobile(),size,unit,nvmtext);
     }
 
     /**

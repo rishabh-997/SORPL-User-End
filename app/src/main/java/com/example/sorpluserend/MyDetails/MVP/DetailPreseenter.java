@@ -41,4 +41,27 @@ public class DetailPreseenter implements DetailContract.presenter
             }
         });
     }
+
+    @Override
+    public void update(String name, String mobile, String phone, String email, String pan, String billto, String shipto, String gst, String bankname, String ifsc, String isc, String bankphone, String accno, String msmenumber, String preferred, final String regtype) {
+        clientAPI.updateClient(name, mobile, phone, email, pan, billto, shipto, gst, bankname, ifsc, isc, bankphone, accno, msmenumber, preferred, regtype).enqueue(new Callback<com.example.sorpluserend.MyDetails.Model.Response>() {
+            @Override
+            public void onResponse(Call<com.example.sorpluserend.MyDetails.Model.Response> call, Response<com.example.sorpluserend.MyDetails.Model.Response> response) {
+                if(response.isSuccessful())
+                {
+                    if(response.body().getMessage().equals("Successful"))
+                        mvpview.showToast("Updated Successfully");
+                    else
+                        mvpview.showToast(response.body().getMessage());
+                }
+                else
+                    mvpview.showToast(response.message());
+            }
+
+            @Override
+            public void onFailure(Call<com.example.sorpluserend.MyDetails.Model.Response> call, Throwable t) {
+                mvpview.showToast(t.getMessage());
+            }
+        });
+    }
 }

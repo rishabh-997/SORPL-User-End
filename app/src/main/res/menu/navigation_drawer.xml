@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/navigation_faq"
-        android:icon="@drawable/ic_info_black_24dp"
-        android:title="FAQ's" />
 
     <item
-        android:id="@+id/navigation_about"
-        android:icon="@drawable/ic_sentiment_very_satisfied_black_24dp"
-        android:title="About Us" />
-
-    <item
-        android:id="@+id/navigation_contactus"
-        android:icon="@drawable/ic_perm_contact_calendar_black_24dp"
-        android:title="Contact Us" />
-
-    <item
-        android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_phone_iphone_black_24dp"
-        android:title="My Details" />
-
+        android:id="@+id/navigation_data"
+        android:title="Company Data"
+        android:icon="@drawable/ic_cloud_download_black_24dp"/>
     <item
         android:id="@+id/navigation_history"
         android:icon="@drawable/ic_history_black_24dp"
         android:title="My History" />
 
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_phone_iphone_black_24dp"
+        android:title="My Details" />
+    <item
+        android:id="@+id/navigation_contactus"
+        android:icon="@drawable/ic_perm_contact_calendar_black_24dp"
+        android:title="Contact Us" />
+    <item
+        android:id="@+id/navigation_about"
+        android:icon="@drawable/ic_sentiment_very_satisfied_black_24dp"
+        android:title="About Us" />
+    <item
+        android:id="@+id/navigation_faq"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="FAQ's" />
     <item
         android:id="@+id/navigation_logout"
         android:icon="@drawable/ic_lock_black_24dp"

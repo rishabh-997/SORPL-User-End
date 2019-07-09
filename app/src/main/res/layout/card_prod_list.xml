@@ -17,7 +17,7 @@
         android:id="@+id/marketlist_name"
         android:text="Product name : name"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:gravity="top"
         android:textAlignment="center"/>
     <View
@@ -52,13 +52,15 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="35dp"
-        android:layout_height="30dp"
+    <TextView
+        android:layout_width="45dp"
+        android:layout_height="24.5dp"
         android:layout_marginRight="1dp"
         android:layout_alignParentEnd="true"
-        android:elevation="12dp"
-        android:src="@drawable/ic_info_outline_black_24dp"
+        android:text="Specs"
+        android:gravity="center"
+        android:elevation="3dp"
+        android:background="@drawable/box_spec"
         android:id="@+id/prodlist_specs"/>
 
 </RelativeLayout>

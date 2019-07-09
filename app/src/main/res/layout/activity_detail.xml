@@ -45,7 +45,8 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -54,7 +55,9 @@
                     android:textSize="16sp"
                     android:textColor="@android:color/black"
                     android:padding="3dp"
-                    android:id="@+id/client_details_name"/>
+                    android:id="@+id/client_details_name"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
 
             </LinearLayout>
 
@@ -75,7 +78,8 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -84,7 +88,9 @@
                     android:textSize="16sp"
                     android:textColor="@android:color/black"
                     android:padding="3dp"
-                    android:id="@+id/client_details_mobile"/>
+                    android:id="@+id/client_details_mobile"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
 
             </LinearLayout>
             <LinearLayout
@@ -104,7 +110,8 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -113,7 +120,9 @@
                     android:textSize="16sp"
                     android:textColor="@android:color/black"
                     android:padding="3dp"
-                    android:id="@+id/client_details_phone"/>
+                    android:id="@+id/client_details_phone"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
 
             </LinearLayout>
             <LinearLayout
@@ -133,7 +142,8 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -141,7 +151,9 @@
                     android:textSize="14sp"
                     android:textColor="@android:color/black"
                     android:padding="3dp"
-                    android:id="@+id/client_details_email"/>
+                    android:id="@+id/client_details_email"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
 
             </LinearLayout>
             <LinearLayout
@@ -161,7 +173,8 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -170,7 +183,9 @@
                     android:textSize="16sp"
                     android:textColor="@android:color/black"
                     android:padding="3dp"
-                    android:id="@+id/client_details_pan"/>
+                    android:id="@+id/client_details_pan"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
 
             </LinearLayout>
             <LinearLayout
@@ -190,7 +205,8 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -199,7 +215,9 @@
                     android:textSize="16sp"
                     android:textColor="@android:color/black"
                     android:padding="3dp"
-                    android:id="@+id/client_details_billto"/>
+                    android:id="@+id/client_details_billto"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
 
             </LinearLayout>
             <LinearLayout
@@ -219,7 +237,8 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -228,7 +247,9 @@
                     android:textSize="16sp"
                     android:textColor="@android:color/black"
                     android:padding="3dp"
-                    android:id="@+id/client_details_shipto"/>
+                    android:id="@+id/client_details_shipto"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
 
             </LinearLayout>
             <LinearLayout
@@ -248,7 +269,8 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -257,7 +279,9 @@
                     android:textSize="16sp"
                     android:textColor="@android:color/black"
                     android:padding="3dp"
-                    android:id="@+id/client_details_gst"/>
+                    android:id="@+id/client_details_gst"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
 
             </LinearLayout>
             <LinearLayout
@@ -277,13 +301,16 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text=""
                     android:textAlignment="center"
                     android:textSize="16sp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:id="@+id/client_details_bankname"/>
@@ -305,7 +332,8 @@
                 android:textColor="@android:color/black"
                 android:padding="3dp"
                 android:background="#D9D6D4D4"/>
-            <TextView
+            <EditText
+                android:background="@android:color/transparent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -314,7 +342,9 @@
                 android:textSize="16sp"
                 android:textColor="@android:color/black"
                 android:padding="3dp"
-                android:id="@+id/client_details_ifsc"/>
+                android:id="@+id/client_details_ifsc"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
 
         </LinearLayout>
             <LinearLayout
@@ -334,7 +364,8 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -343,6 +374,8 @@
                     android:textSize="16sp"
                     android:textColor="@android:color/black"
                     android:padding="3dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:id="@+id/client_details_isc"/>
 
             </LinearLayout>
@@ -363,8 +396,11 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text=""
@@ -392,13 +428,16 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text=""
                     android:textAlignment="center"
                     android:textSize="16sp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:id="@+id/client_details_bankphone"/>
@@ -421,10 +460,13 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:text=""
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -438,8 +480,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginRight="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginBottom="6dp">
+                android:layout_marginLeft="4dp">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -450,11 +491,14 @@
                     android:textColor="@android:color/black"
                     android:padding="3dp"
                     android:background="#D9D6D4D4"/>
-                <TextView
+                <EditText
+                    android:background="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text=""
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:textAlignment="center"
                     android:textSize="16sp"
                     android:textColor="@android:color/black"
@@ -462,6 +506,18 @@
                     android:id="@+id/client_details_transport"/>
 
             </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:text="Update Details"
+                android:background="@drawable/gradbutton"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="6dp"
+                android:id="@+id/client_update"/>
 
         </LinearLayout>
     </ScrollView>

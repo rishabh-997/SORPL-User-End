@@ -13,7 +13,7 @@
                 android:right="30dp"
                 android:top="1dp"/>
             <corners
-                android:radius="70dp"/>
+                android:radius="1dp"/>
             <solid android:color="#00000000"/>
 
         </shape>

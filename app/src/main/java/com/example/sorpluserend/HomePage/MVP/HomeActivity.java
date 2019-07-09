@@ -7,27 +7,24 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabItem;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.sorpluserend.AboutUs.AboutUsActivity;
 import com.example.sorpluserend.Cart.CartActivity;
+import com.example.sorpluserend.CompanyData.MVP.CompanyActivity;
 import com.example.sorpluserend.ContactUs.MVP.ContactActivity;
 import com.example.sorpluserend.FAQ.MVP.FAQActivity;
+import com.example.sorpluserend.Help.MVP.HelpActivity;
 import com.example.sorpluserend.History.MVP.HistoryActivity;
 import com.example.sorpluserend.HomePage.MVP.Cart.CartFragment;
 import com.example.sorpluserend.HomePage.MVP.Enquiry.EnquiryFragment;
@@ -43,8 +40,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import timber.log.Timber;
 
-import static com.example.sorpluserend.Utilities.MyApplication.getContext;
-
 public class HomeActivity extends AppCompatActivity implements HomeContract.view, CartFragment.CartFragmentListener, ProductFragment.ProductFragmentListener
 {
     HomeContract.presenter presenter;
@@ -56,6 +51,8 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
     TextView heading;
     @BindView(R.id.toolbar_cart)
     ImageView cart;
+    @BindView(R.id.toolbar_help)
+    ImageView help;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
@@ -116,6 +113,8 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
                     startActivity(new Intent(HomeActivity.this, AboutUsActivity.class));
                 else if(id==R.id.navigation_history)
                     startActivity(new Intent(HomeActivity.this, HistoryActivity.class));
+                else if (id==R.id.navigation_data)
+                    startActivity(new Intent(HomeActivity.this, CompanyActivity.class));
                 return true;
             }
         });
@@ -126,6 +125,16 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
                 goToCart();
             }
         });
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoHelp();
+            }
+        });
+    }
+
+    private void gotoHelp() {
+            startActivity(new Intent(this, HelpActivity.class));
     }
 
     private void goToCart()

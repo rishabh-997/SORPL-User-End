@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 
 public class SharedPref
 {
-
+    private static final String BASEURL="url";
     private static final String PREF_NAME = "welcome";
     private static final String KEY_ACCESS_TOKEN = "access_token";
     private static final String MOBILE = "mobile";
@@ -38,16 +38,6 @@ public class SharedPref
     public void setMobile(String mobile)
     {
         editor.putString(MOBILE,mobile);
-        editor.commit();
-    }
-
-    public String getFCM()
-    {
-        return pref.getString(FCM,"");
-    }
-    public void setFCM(String fcm)
-    {
-        editor.putString(FCM,fcm);
         editor.commit();
     }
 

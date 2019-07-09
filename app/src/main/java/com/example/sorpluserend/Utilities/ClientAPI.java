@@ -1,5 +1,7 @@
 package com.example.sorpluserend.Utilities;
+import com.example.sorpluserend.CompanyData.Model.DataResponse;
 import com.example.sorpluserend.ContactUs.Model.ContactResponse;
+import com.example.sorpluserend.Help.Model.HelpResponse;
 import com.example.sorpluserend.History.Model.HistoryDetailResponse;
 import com.example.sorpluserend.History.Model.HistoryResponse;
 import com.example.sorpluserend.HomePage.Model.CartResponse;
@@ -12,18 +14,48 @@ import com.example.sorpluserend.HomePage.Model.SpecResponse;
 import com.example.sorpluserend.HomePage.Model.SubCat_response;
 import com.example.sorpluserend.HomePage.Model.UnitResponse;
 import com.example.sorpluserend.LogIn.Model.LogInResponse;
+import com.example.sorpluserend.MyDetails.Model.Response;
 import com.example.sorpluserend.MyDetails.Model.ResponseClient;
 import com.example.sorpluserend.OTP.Model.OTPResponse;
 import com.example.sorpluserend.SignUp.Model.ResponseBody;
+import com.example.sorpluserend.Splash.Model.VersionResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface ClientAPI
 {
+
+    @POST("splash_screen/")
+    @FormUrlEncoded
+    Call<VersionResponse> getVersion(
+            @Field("mob") String mob
+    );
+
+    @POST("UpdateRegistrations/")
+    @FormUrlEncoded
+    Call<Response> updateClient(
+            @Field("Name")String name,
+            @Field("Mobile")String mobile,
+            @Field("Phone")String phone,
+            @Field("Email")String email,
+            @Field("Pan")String pan,
+            @Field("BillTo")String billto,
+            @Field("ShipTo")String shipto,
+            @Field("GSTNo")String gst,
+            @Field("BankName")String bankname,
+            @Field("IFSCNo")String ifsc,
+            @Field("ISCCode")String isc,
+            @Field("BankPhone")String bankphone,
+            @Field("AccountNo")String acccountno,
+            @Field("MSMENo")String msme,
+            @Field("TransportNo")String transport,
+            @Field("RegType")String reg
+    );
 
     @POST("Search/")
     @FormUrlEncoded
@@ -87,7 +119,8 @@ public interface ClientAPI
             @Field("MobileNumber") String mobile,
             @Field("PID") String pid,
             @Field("Size") String size,
-            @Field("Unit") String unit
+            @Field("Unit") String unit,
+            @Field("NVM") String nvm
     );
 
     @POST("CartDetails/")
@@ -146,6 +179,18 @@ public interface ClientAPI
     @POST("GetUnitData/")
     @FormUrlEncoded
     Call<UnitResponse> getUnits(
+            @Field("mob") String mob
+    );
+
+    @POST("DocumentDetails/")
+    @FormUrlEncoded
+    Call<DataResponse> getPDF(
+            @Field("mob") String mobile
+    );
+
+    @POST("Help/")
+    @FormUrlEncoded
+    Call<HelpResponse> getHelp(
             @Field("mob") String mob
     );
 }
