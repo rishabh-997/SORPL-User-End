@@ -8,17 +8,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:779659215285:android:d88387bf7e3882e0",
+        "mobilesdk_app_id": "1:779659215285:android:d7c741d97a0cb2c2",
         "android_client_info": {
-          "package_name": "com.example.sorpluserend"
+          "package_name": "com.rishabh.sorpluserend"
         }
       },
       "oauth_client": [
         {
-          "client_id": "779659215285-buv5f5uqikge0c7g2820o5jnhvev3lmh.apps.googleusercontent.com",
+          "client_id": "779659215285-2ii0hq4mnbeje45bpm5tl1l8g241aatj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.sorpluserend",
+            "package_name": "com.rishabh.sorpluserend",
             "certificate_hash": "5cb9df8ee8a976572adaab3240a84ee6a3b9e2b8"
           }
         },

@@ -27,6 +27,13 @@
         android:id="@+id/navigation_faq"
         android:icon="@drawable/ic_info_black_24dp"
         android:title="FAQ's" />
+
+    <item
+        android:id="@+id/navigation_policy"
+        android:title="Privacy Policy"
+        android:icon="@drawable/ic_priority_high_black_24dp"
+        />
+
     <item
         android:id="@+id/navigation_logout"
         android:icon="@drawable/ic_lock_black_24dp"

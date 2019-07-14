@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sorpluserend">
+    package="com.rishabh.sorpluserend">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -16,7 +16,7 @@
 
 
         <service
-            android:name=".Services.MyFireBaseMessagingService"
+            android:name="com.rishabh.sorpluserend.Services.MyFireBaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -28,8 +28,9 @@
             android:value="@string/default_notification_channel_id"/>
 
         <activity
-            android:name=".Splash.MVP.SplashActivity"
-            android:theme="@style/AppTheme">
+            android:name="com.rishabh.sorpluserend.Splash.MVP.SplashActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,53 +38,67 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HomePage.MVP.HomeActivity"
+            android:name="com.rishabh.sorpluserend.HomePage.MVP.HomeActivity"
             android:label="Home"
-            android:theme="@style/AppTheme2"/>
+            android:theme="@style/AppTheme2"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".SignUp.MVP.SignUpActivity"
+            android:name="com.rishabh.sorpluserend.SignUp.MVP.SignUpActivity"
             android:label="SignUp"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".OTP.MVP.OTPActivity"
+            android:name="com.rishabh.sorpluserend.OTP.MVP.OTPActivity"
             android:label="OTP"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".LogIn.MVP.LogInActivity"
+            android:screenOrientation="portrait"
+            android:name="com.rishabh.sorpluserend.LogIn.MVP.LogInActivity"
             android:label="Log In"
             android:theme="@style/AppTheme"></activity>
         <activity
-            android:name=".ContactUs.MVP.ContactActivity"
+            android:screenOrientation="portrait"
+            android:name="com.rishabh.sorpluserend.ContactUs.MVP.ContactActivity"
             android:label="Contact Us"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".FAQ.MVP.FAQActivity"
+            android:name="com.rishabh.sorpluserend.FAQ.MVP.FAQActivity"
             android:label="FAQ's"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
-        <activity android:name=".AboutUs.AboutUsActivity"
+        <activity android:name="com.rishabh.sorpluserend.AboutUs.AboutUsActivity"
             android:label="About Us"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".History.MVP.HistoryActivity"
+            android:name="com.rishabh.sorpluserend.History.MVP.HistoryActivity"
             android:label="History"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
-        <activity android:name=".Cart.CartActivity"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".MyDetails.MVP.DetailActivity"
+        <activity android:name="com.rishabh.sorpluserend.Cart.CartActivity"
             android:theme="@style/AppTheme"
-            android:label="Detail"/>
-        <activity android:name=".AboutUsOnSignUp.AboutUs2Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.rishabh.sorpluserend.MyDetails.MVP.DetailActivity"
+            android:theme="@style/AppTheme"
+            android:label="Detail"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.rishabh.sorpluserend.AboutUsOnSignUp.AboutUs2Activity"
             android:label="About Us"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".CompanyData.MVP.CompanyActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.rishabh.sorpluserend.CompanyData.MVP.CompanyActivity"
             android:label="Company Data"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".CompanyData.ViewActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.rishabh.sorpluserend.CompanyData.ViewActivity"
             android:label="PDF"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Help.MVP.HelpActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.rishabh.sorpluserend.Help.MVP.HelpActivity"
             android:label="Help"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
