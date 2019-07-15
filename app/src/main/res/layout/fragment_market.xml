@@ -47,6 +47,7 @@
                     android:layout_height="wrap_content"
                     android:text="MARKET - INR/USD"
                     android:textStyle="bold"
+                    android:fontFamily="@font/comfortaa_bold"
                     android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp"/>

@@ -31,8 +31,8 @@
                 android:gravity="bottom"
                 android:text="ether"
                 android:textStyle="bold"
-                android:textSize="13sp"
-                android:fontFamily="sans-serif-black"
+                android:textSize="11.5sp"
+                android:fontFamily="@font/comfortaa_bold"
                 android:textAllCaps="true"/>
             <TextView
                 android:id="@+id/pdf_desc"

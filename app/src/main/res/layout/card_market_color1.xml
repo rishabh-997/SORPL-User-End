@@ -35,8 +35,8 @@
                 android:gravity="bottom"
                 android:text="ether"
                 android:textStyle="bold"
-                android:textSize="15sp"
-                android:fontFamily="sans-serif-black"
+                android:textSize="13sp"
+                android:fontFamily="@font/comfortaa_bold"
                 android:textAllCaps="true"/>
             <TextView
                 android:id="@+id/market_desc1"

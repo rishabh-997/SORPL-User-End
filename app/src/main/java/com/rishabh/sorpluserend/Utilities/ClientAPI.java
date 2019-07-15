@@ -198,4 +198,10 @@ public interface ClientAPI
     Call<AffiliationResponse> getAffiliation(
             @Field("mob") String mob
     );
+
+    @POST("FeedDetails/")
+    @FormUrlEncoded
+    Call<AffiliationResponse> getFeed(
+            @Field("mob") String mob
+    );
 }

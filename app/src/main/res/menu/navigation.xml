@@ -16,9 +16,13 @@
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="@string/title_market" />
 
+    <item android:id="@+id/navigation_feed"
+        android:title="Feed"
+        android:icon="@drawable/ic_feedback_black_24dp" />
     <item
         android:id="@+id/navigation_enquiry"
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="@string/title_enquiry" />
+
 
 </menu>

@@ -30,6 +30,7 @@ import com.rishabh.sorpluserend.Help.MVP.HelpActivity;
 import com.rishabh.sorpluserend.History.MVP.HistoryActivity;
 import com.rishabh.sorpluserend.HomePage.MVP.Cart.CartFragment;
 import com.rishabh.sorpluserend.HomePage.MVP.Enquiry.EnquiryFragment;
+import com.rishabh.sorpluserend.HomePage.MVP.Feed.FeedFragment;
 import com.rishabh.sorpluserend.HomePage.MVP.Market.MarketFragment;
 import com.rishabh.sorpluserend.HomePage.MVP.Product.ProductFragment;
 import com.rishabh.sorpluserend.LogIn.MVP.LogInActivity;
@@ -63,6 +64,7 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
     final Fragment fragment2 = new MarketFragment();
     final Fragment fragment3 = new EnquiryFragment();
     final Fragment fragment4 = new CartFragment();
+    final Fragment fragment5 = new FeedFragment();
     final FragmentManager fm = getSupportFragmentManager();
     Fragment active = fragment1;
 
@@ -91,10 +93,11 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        fm.beginTransaction().add(R.id.main_container,fragment4,"4").hide(fragment4).commit();
+        fm.beginTransaction().add(R.id.main_container, fragment5, "5").hide(fragment5).commit();
+        fm.beginTransaction().add(R.id.main_container, fragment4, "4").hide(fragment4).commit();
         fm.beginTransaction().add(R.id.main_container, fragment3, "3").hide(fragment3).commit();
         fm.beginTransaction().add(R.id.main_container, fragment2, "2").hide(fragment2).commit();
-        fm.beginTransaction().add(R.id.main_container,fragment1, "1").commit();
+        fm.beginTransaction().add(R.id.main_container, fragment1, "1").commit();
 
         navview.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -204,6 +207,10 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
                 case R.id.navigation_cart:
                     fm.beginTransaction().hide(active).show(fragment4).commit();
                     active=fragment4;
+                    return true;
+                case R.id.navigation_feed:
+                    fm.beginTransaction().hide(active).show(fragment5).commit();
+                    active=fragment5;
                     return true;
             }
             return false;
