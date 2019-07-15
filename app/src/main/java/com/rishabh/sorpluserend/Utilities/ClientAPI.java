@@ -1,4 +1,5 @@
 package com.rishabh.sorpluserend.Utilities;
+import com.rishabh.sorpluserend.Affiliation.Model.AffiliationResponse;
 import com.rishabh.sorpluserend.CompanyData.Model.DataResponse;
 import com.rishabh.sorpluserend.ContactUs.Model.ContactResponse;
 import com.rishabh.sorpluserend.Help.Model.HelpResponse;
@@ -189,6 +190,12 @@ public interface ClientAPI
     @POST("Help/")
     @FormUrlEncoded
     Call<HelpResponse> getHelp(
+            @Field("mob") String mob
+    );
+
+    @POST("AffiliationDetails/")
+    @FormUrlEncoded
+    Call<AffiliationResponse> getAffiliation(
             @Field("mob") String mob
     );
 }

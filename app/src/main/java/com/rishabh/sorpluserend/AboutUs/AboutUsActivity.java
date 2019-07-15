@@ -45,7 +45,6 @@ public class AboutUsActivity  extends AppCompatActivity
                 onBackPressed();
             }
         });
-        Log.i("fcm", MyApplication.getFcm());
     }
     @Override
     public void onBackPressed() {

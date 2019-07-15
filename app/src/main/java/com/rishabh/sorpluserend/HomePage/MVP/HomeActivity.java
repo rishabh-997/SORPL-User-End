@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.rishabh.sorpluserend.AboutUs.AboutUsActivity;
+import com.rishabh.sorpluserend.Affiliation.MVP.AffiliationActivity;
 import com.rishabh.sorpluserend.Cart.CartActivity;
 import com.rishabh.sorpluserend.CompanyData.MVP.CompanyActivity;
 import com.rishabh.sorpluserend.ContactUs.MVP.ContactActivity;
@@ -118,6 +119,8 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
                     startActivity(new Intent(HomeActivity.this, CompanyActivity.class));
                 else if(id==R.id.navigation_policy)
                     showPolicy();
+                else if(id==R.id.navigation_affiliation)
+                    startActivity(new Intent(HomeActivity.this, AffiliationActivity.class));
                 return true;
             }
         });

@@ -99,6 +99,10 @@
             android:label="Help"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"/>
+        <activity android:name=".Affiliation.MVP.AffiliationActivity"
+            android:label="Affiliation"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
