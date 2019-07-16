@@ -7,12 +7,6 @@
     <include layout="@layout/toolbar"
         android:id="@+id/tool"/>
 
-    <com.github.barteksc.pdfviewer.PDFView
-        android:layout_below="@id/tool"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/pdf">
-    </com.github.barteksc.pdfviewer.PDFView>
 
     <ProgressBar
         android:layout_width="wrap_content"

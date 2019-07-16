@@ -80,6 +80,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/navigation"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
         app:labelVisibilityMode="labeled"/>
 
 

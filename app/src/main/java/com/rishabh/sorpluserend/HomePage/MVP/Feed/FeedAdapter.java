@@ -46,6 +46,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
             viewHolder.linearLayout.setBackgroundColor(Color.parseColor("#ffffff"));
         }
         viewHolder.desc.setText(affiliationList.getDescription());
+        viewHolder.date.setText(affiliationList.getDate());
         Picasso.get()
                 .load(affiliationList.getUrl())
                 .resizeDimen(R.dimen.resize_image,R.dimen.resize_image)
@@ -59,7 +60,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
-        TextView desc;
+        TextView desc,date;
         ImageView imageView;
         LinearLayout linearLayout;
 
@@ -67,6 +68,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
             super(itemView);
             desc=itemView.findViewById(R.id.feed_desc);
             imageView=itemView.findViewById(R.id.feed_image);
+            date=itemView.findViewById(R.id.feed_date);
             linearLayout=itemView.findViewById(R.id.feed_layout);
         }
     }

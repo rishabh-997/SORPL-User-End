@@ -59,7 +59,6 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
-
     final Fragment fragment1 = new ProductFragment();
     final Fragment fragment2 = new MarketFragment();
     final Fragment fragment3 = new EnquiryFragment();
@@ -190,16 +189,19 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_products:
+                    heading.setText("Home");
                     fm.beginTransaction().hide(active).show(fragment1).commit();
                     active = fragment1;
                     return true;
 
                 case R.id.navigation_market:
+                    heading.setText("Market");
                     fm.beginTransaction().hide(active).show(fragment2).commit();
                     active = fragment2;
                     return true;
 
                 case R.id.navigation_enquiry:
+                    heading.setText("Enquiry");
                     fm.beginTransaction().hide(active).show(fragment3).commit();
                     active = fragment3;
                     return true;
@@ -209,6 +211,7 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.view
                     active=fragment4;
                     return true;
                 case R.id.navigation_feed:
+                    heading.setText("News Feed");
                     fm.beginTransaction().hide(active).show(fragment5).commit();
                     active=fragment5;
                     return true;

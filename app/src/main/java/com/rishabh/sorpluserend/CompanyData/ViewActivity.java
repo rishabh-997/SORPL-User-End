@@ -13,16 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rishabh.sorpluserend.R;
-import com.github.barteksc.pdfviewer.PDFView;
-import com.github.barteksc.pdfviewer.listener.OnDrawListener;
-import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
-import com.github.barteksc.pdfviewer.listener.OnPageErrorListener;
-import com.github.barteksc.pdfviewer.listener.OnRenderListener;
-import com.github.barteksc.pdfviewer.listener.OnTapListener;
-import com.krishna.fileloader.FileLoader;
-import com.krishna.fileloader.listener.FileRequestListener;
-import com.krishna.fileloader.pojo.FileResponse;
-import com.krishna.fileloader.request.FileLoadRequest;
 
 import java.io.File;
 
@@ -33,9 +23,9 @@ public class ViewActivity extends AppCompatActivity
 {
     @BindView(R.id.view_bar)
     ProgressBar progressBar;
-    @BindView(R.id.pdf)
+   /* @BindView(R.id.pdf)
     PDFView pdfView;
-
+*/
     @BindView(R.id.toolbar_text)
     TextView toolbarText;
     @BindView(R.id.toolbar_back)
@@ -59,7 +49,7 @@ public class ViewActivity extends AppCompatActivity
                 onBackPressed();
             }
         });
-
+/*
         FileLoader.with(this)
                 .load(url)
                 .fromDirectory("PDFFiles",FileLoader.DIR_EXTERNAL_PUBLIC)
@@ -122,7 +112,7 @@ public class ViewActivity extends AppCompatActivity
                         Toast.makeText(ViewActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
                         progressBar.setVisibility(View.GONE);
                     }
-                });
+                });*/
     }
 
     @Override

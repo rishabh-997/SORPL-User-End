@@ -13,6 +13,9 @@ public class AffiliationList
     @SerializedName("description")
     String description;
 
+    @SerializedName("date")
+    String date;
+
     public String getName() {
         return Name;
     }
@@ -23,5 +26,9 @@ public class AffiliationList
 
     public String getDescription() {
         return description;
+    }
+
+    public String getDate() {
+        return date;
     }
 }

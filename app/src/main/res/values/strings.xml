@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">SORPL User End</string>
+    <string name="app_name">SORPL</string>
     <string name="title_product">Products</string>
     <string name="title_market">Market</string>
     <string name="title_enquiry">Enquiry</string>
     <string name="Open">open</string>
     <string name="Close">close</string>
+    <string name="keystore_password">123456789</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
